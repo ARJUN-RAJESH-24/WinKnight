@@ -1,0 +1,8 @@
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\RestoreGuard\RestoreGuard\bin\Debug\RestoreGuard.exe.config
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\RestoreGuard\RestoreGuard\bin\Debug\RestoreGuard.exe
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\RestoreGuard\RestoreGuard\bin\Debug\RestoreGuard.pdb
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\RestoreGuard\RestoreGuard\obj\Debug\RestoreGuard.csproj.AssemblyReference.cache
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\RestoreGuard\RestoreGuard\obj\Debug\RestoreGuard.csproj.CoreCompileInputs.cache
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\RestoreGuard\RestoreGuard\obj\Debug\RestoreGuard.exe
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\RestoreGuard\RestoreGuard\obj\Debug\RestoreGuard.pdb
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\RestoreGuard\RestoreGuard\obj\Debug\RestoreGuard.exe.config
