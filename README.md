@@ -1,7 +1,7 @@
 # WinKnight Project Overview
 
 ## Vision  
-RestoreGuard aims to provide every Windows user, from beginners to experts, with a seamless, intelligent, and fully automated system recovery solution. By proactively creating system restore points and silently diagnosing and repairing common Windows issues, RestoreGuard empowers users to enjoy a stable, reliable, and self-healing PC experience without manual intervention or technical expertise.
+WinKnight aims to provide every Windows user, from beginners to experts, with a seamless, intelligent, and fully automated system recovery solution. By proactively creating system restore points and silently diagnosing and repairing common Windows issues, WinKnight empowers users to enjoy a stable, reliable, and self-healing PC experience without manual intervention or technical expertise.
 
 ---
 
