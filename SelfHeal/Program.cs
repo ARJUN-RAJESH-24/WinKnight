@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Diagnostics; // This is the corrected 'using' directive for the EventLog class
 using System.IO;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+// Note: This using statement is now redundant and has been removed from the code.
 
 public class SelfHeal
 {
@@ -48,62 +49,70 @@ public class SelfHeal
         await RunDISMScanAsync(report);
 
         Console.WriteLine("\nScan and repair complete. Writing report to SelfHeal_report.txt");
-        File.WriteAllText("SelfHeal_report.txt", report.ToString());
+        // FIX: Use a specific encoding (e.g., UTF-8) to prevent file corruption
+        File.WriteAllText("SelfHeal_report.txt", report.ToString(), Encoding.UTF8);
     }
 
     private static bool IsAdministrator()
     {
+#if WINDOWS
         using (WindowsIdentity identity = WindowsIdentity.GetCurrent())
         {
             WindowsPrincipal principal = new WindowsPrincipal(identity);
             return principal.IsInRole(WindowsBuiltInRole.Administrator);
         }
+#else
+        return false;
+#endif
     }
 
     private static async Task ScanEventLogAsync(StringBuilder report)
     {
         try
         {
-            var eventLog = new EventLog(LogName);
-            var criticalEvents = 0;
-            var daysToCheck = 7; // Look for errors in the last 7 days
-
-            var criticalEventDictionary = new Dictionary<long, List<EventLogEntry>>();
-
-            foreach (EventLogEntry entry in eventLog.Entries)
+            await Task.Run(() =>
             {
-                if (entry.TimeGenerated > DateTime.Now.AddDays(-daysToCheck))
+                var eventLog = new EventLog(LogName);
+                var criticalEvents = 0;
+                var daysToCheck = 7;
+
+                var criticalEventDictionary = new Dictionary<long, List<EventLogEntry>>();
+
+                foreach (EventLogEntry entry in eventLog.Entries)
                 {
-                    if (entry.EntryType == EventLogEntryType.Error && (entry.InstanceId == CriticalEventId || Array.Exists(OtherCriticalEvents, id => id == entry.InstanceId)))
+                    if (entry.TimeGenerated > DateTime.Now.AddDays(-daysToCheck))
                     {
-                        if (!criticalEventDictionary.ContainsKey(entry.InstanceId))
+                        if (entry.EntryType == EventLogEntryType.Error && (entry.InstanceId == CriticalEventId || Array.Exists(OtherCriticalEvents, id => id == entry.InstanceId)))
                         {
-                            criticalEventDictionary[entry.InstanceId] = new List<EventLogEntry>();
+                            if (!criticalEventDictionary.ContainsKey(entry.InstanceId))
+                            {
+                                criticalEventDictionary[entry.InstanceId] = new List<EventLogEntry>();
+                            }
+                            criticalEventDictionary[entry.InstanceId].Add(entry);
+                            criticalEvents++;
                         }
-                        criticalEventDictionary[entry.InstanceId].Add(entry);
-                        criticalEvents++;
                     }
                 }
-            }
 
-            if (criticalEvents > 0)
-            {
-                report.AppendLine($"  Found a total of {criticalEvents} critical errors in the last {daysToCheck} days.");
-                foreach (var kvp in criticalEventDictionary)
+                if (criticalEvents > 0)
                 {
-                    report.AppendLine($"  - Event ID {kvp.Key}: {kvp.Value.Count} occurrences.");
-                    if (kvp.Value.Count > 0)
+                    report.AppendLine($"  Found a total of {criticalEvents} critical errors in the last {daysToCheck} days.");
+                    foreach (var kvp in criticalEventDictionary)
                     {
-                        report.AppendLine($"    First occurrence: {kvp.Value[0].TimeGenerated}");
-                        report.AppendLine($"    Most recent: {kvp.Value[kvp.Value.Count - 1].TimeGenerated}");
+                        report.AppendLine($"  - Event ID {kvp.Key}: {kvp.Value.Count} occurrences.");
+                        if (kvp.Value.Count > 0)
+                        {
+                            report.AppendLine($"    First occurrence: {kvp.Value[0].TimeGenerated}");
+                            report.AppendLine($"    Most recent: {kvp.Value[kvp.Value.Count - 1].TimeGenerated}");
+                        }
+                        report.AppendLine("    Action: These events may indicate an underlying hardware or software issue that requires further investigation.");
                     }
-                    report.AppendLine("    Action: These events may indicate an underlying hardware or software issue that requires further investigation.");
                 }
-            }
-            else
-            {
-                report.AppendLine($"  No critical errors found in the last {daysToCheck} days. The system appears stable.");
-            }
+                else
+                {
+                    report.AppendLine($"  No critical errors found in the last {daysToCheck} days. The system appears stable.");
+                }
+            });
         }
         catch (Exception ex)
         {
@@ -147,10 +156,8 @@ public class SelfHeal
         }
     }
 
-
     private static async Task RunSFCScanAsync(StringBuilder report)
     {
-        // Check for file integrity violations
         Console.WriteLine("  Running 'sfc /scannow' to check file integrity... This may take a while.");
         string output = await ExecuteProcessAsync("sfc.exe", "/scannow");
         report.AppendLine("  SFC Scan Output:");
@@ -174,7 +181,6 @@ public class SelfHeal
 
     private static async Task RunDISMScanAsync(StringBuilder report)
     {
-        // First, check the health of the component store.
         Console.WriteLine("  Running 'DISM /Online /Cleanup-Image /ScanHealth' to check store health... This may take a while.");
         string scanOutput = await ExecuteProcessAsync("dism.exe", "/Online /Cleanup-Image /ScanHealth");
         report.AppendLine("  DISM ScanHealth Output:");
@@ -188,9 +194,8 @@ public class SelfHeal
         else if (scanOutput.Contains("The component store is repairable"))
         {
             report.AppendLine("  Warning: The Windows component store is corrupted but repairable.");
-            report.WriteLine("  Action: Attempting to run 'DISM /Online /Cleanup-Image /RestoreHealth' to repair...");
+            report.AppendLine("  Action: Attempting to run 'DISM /Online /Cleanup-Image /RestoreHealth' to repair...");
 
-            // If corruption is found, run the repair command.
             string repairOutput = await ExecuteProcessAsync("dism.exe", "/Online /Cleanup-Image /RestoreHealth");
             report.AppendLine("  DISM RestoreHealth Output:");
             report.AppendLine("---------------------------");

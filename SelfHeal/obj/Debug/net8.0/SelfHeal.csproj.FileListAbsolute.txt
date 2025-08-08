@@ -3,3 +3,17 @@ D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.Assem
 D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.AssemblyInfo.cs
 D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.csproj.CoreCompileInputs.cache
 D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.sourcelink.json
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.csproj.AssemblyReference.cache
+D:\Notes and Projects\Project\WinKnight\SelfHeal\bin\Debug\net8.0\SelfHeal.exe
+D:\Notes and Projects\Project\WinKnight\SelfHeal\bin\Debug\net8.0\SelfHeal.deps.json
+D:\Notes and Projects\Project\WinKnight\SelfHeal\bin\Debug\net8.0\SelfHeal.runtimeconfig.json
+D:\Notes and Projects\Project\WinKnight\SelfHeal\bin\Debug\net8.0\SelfHeal.dll
+D:\Notes and Projects\Project\WinKnight\SelfHeal\bin\Debug\net8.0\SelfHeal.pdb
+D:\Notes and Projects\Project\WinKnight\SelfHeal\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+D:\Notes and Projects\Project\WinKnight\SelfHeal\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.csproj.Up2Date
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.dll
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\refint\SelfHeal.dll
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.pdb
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.genruntimeconfig.cache
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\ref\SelfHeal.dll
