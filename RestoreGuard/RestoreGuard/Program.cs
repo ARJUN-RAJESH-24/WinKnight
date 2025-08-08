@@ -10,23 +10,50 @@ namespace RestoreGuard
         {
             try
             {
-                // Create a restore point
-                CreateRestorePoint("Manual Restore Point", 0, 100);
-                Console.WriteLine("\nRestore point creation requested.\n");
+                Console.WriteLine("RestoreGuard is now watching for Windows Update events...");
+                WatchWindowsUpdateEvents();
 
-                // List existing restore points
-                ListRestorePoints();
+                Console.WriteLine("Press Enter to stop watching.");
+                Console.ReadLine();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
                 Console.WriteLine("StackTrace: " + ex.StackTrace);
             }
-
-            Console.WriteLine("\nPress Enter to exit.");
-            Console.ReadLine();
         }
 
+        // Watches for Windows Update start events
+        public static void WatchWindowsUpdateEvents()
+        {
+            string query = @"
+             SELECT * FROM __InstanceCreationEvent 
+             WITHIN 5 
+             WHERE TargetInstance ISA 'Win32_NTLogEvent' 
+             AND TargetInstance.Logfile = 'Application' 
+             AND TargetInstance.EventCode = '1234'
+";
+
+
+            ManagementEventWatcher watcher = new ManagementEventWatcher(query);
+            watcher.EventArrived += (sender, e) =>
+            {
+                Console.WriteLine("Windows Update detected! Creating restore point...");
+                try
+                {
+                    CreateRestorePoint("Before Windows Update", 12, 100);
+                    Console.WriteLine("Restore point creation requested.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error creating restore point: " + ex.Message);
+                }
+            };
+
+            watcher.Start();
+        }
+
+        // Creates a restore point
         public static void CreateRestorePoint(string description, int restoreType, int eventType)
         {
             var scope = new ManagementScope(@"\\localhost\root\default");
@@ -41,6 +68,7 @@ namespace RestoreGuard
                 throw new Exception("Failed to create restore point. Return code: " + result);
         }
 
+        // Lists all existing restore points
         public static void ListRestorePoints()
         {
             var scope = new ManagementScope(@"\\localhost\root\default");
