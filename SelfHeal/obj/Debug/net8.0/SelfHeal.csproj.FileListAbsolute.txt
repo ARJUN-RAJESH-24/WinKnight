@@ -1,0 +1,5 @@
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.GeneratedMSBuildEditorConfig.editorconfig
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.AssemblyInfoInputs.cache
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.AssemblyInfo.cs
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.csproj.CoreCompileInputs.cache
+D:\Notes and Projects\Project\WinKnight\SelfHeal\obj\Debug\net8.0\SelfHeal.sourcelink.json
