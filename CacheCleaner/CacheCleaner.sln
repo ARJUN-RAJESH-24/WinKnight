@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheCleaner", "CacheCleaner.csproj", "{AFDC6C3A-E36C-45DD-8F19-139C3891703E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFDC6C3A-E36C-45DD-8F19-139C3891703E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDC6C3A-E36C-45DD-8F19-139C3891703E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDC6C3A-E36C-45DD-8F19-139C3891703E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDC6C3A-E36C-45DD-8F19-139C3891703E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8975D2FE-CE28-4DD0-93A4-9D2A3EAF0AB9}
+	EndGlobalSection
+EndGlobal
