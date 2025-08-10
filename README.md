@@ -1,114 +1,92 @@
 # WinKnight Project Overview
 
-## Vision  
-WinKnight aims to provide every Windows user, from beginners to experts, with a seamless, intelligent, and fully automated system recovery solution. By proactively creating system restore points and silently diagnosing and repairing common Windows issues, WinKnight empowers users to enjoy a stable, reliable, and self-healing PC experience without manual intervention or technical expertise.
+## Vision
+**WinKnight** is an intelligent, self-healing system recovery solution designed for Windows users.  
+Its core mission is to provide a stable, reliable PC experience by proactively managing system health and automatically resolving common issues without manual intervention.  
+The project aims to simplify PC maintenance, making advanced system diagnostics and repair accessible to everyone.
 
 ---
 
-## High-Level Workflow / Flowchart Description
+## High-Level Workflow
+The project is built on an automated, continuous feedback loop:
 
-1. **Start**  
-   - Application or Windows boots up.
+1. **System Monitoring**  
+   WinKnight operates silently in the background, continuously monitoring for signs of trouble.
 
-2. **Check Conditions for Restore Point Creation**  
-   - Is it scheduled time?  
-   - Has a system-changing event occurred (e.g., software install, driver update)?  
-   - Is the last restore point too old?
+2. **Proactive Backup**  
+   The **RestoreGuard** module proactively watches for significant system changes, such as Windows Updates, and automatically creates a system restore point before changes are applied.
 
-3. **Create System Restore Point**  
-   - Invoke Windows Backup APIs or PowerShell to create a restore point.  
-   - Log success or failure.
+3. **Issue Detection**  
+   The **SelfHeal** module analyzes system event logs and other key metrics to detect warnings, errors, and potential instabilities.
 
-4. **Monitor System Health**  
-   - Continuously monitor Windows Event Logs, Performance Counters, Crash Dumps.  
-   - Detect warnings and errors that could lead to system instability.
+4. **Automated Repair**  
+   If issues are found, the **SelfHeal** module executes built-in Windows repair tools like **SFC** and **DISM**.  
+   It also runs the **CacheCleaner** module to clear out temporary files that could be causing problems.
 
-5. **Detect Issue?**  
-   - Yes → Proceed to automatic repair step.  
-   - No → Continue monitoring.
+5. **Recovery Fallback**  
+   If the automated repair fails or system stability remains a concern, the system can automatically restore from the most recent, known-good restore point created by the application.
 
-6. **Run Automated Repair**  
-   - Execute System File Checker (SFC), DISM, driver verification, malware scan scripts silently.  
-   - Apply fixes or roll back recent changes based on health status.
+6. **User Reporting**  
+   A clean, user-friendly report is generated to show:
+   - What was found  
+   - What was fixed  
+   - The current system status
 
-7. **Verification Post-Repair**  
-   - Check if the issue is resolved.  
-   - If resolved, log and notify user with minimal info or silently.
-
-8. **Recovery Fallback**  
-   - If repair fails or system instability continues, automatically initiate system restore using the latest restore point.
-
-9. **User Notification (Optional)**  
-   - Provide a user-friendly report/dashboard with what was done and system status.
-
-10. **Loop back to Monitoring**
+7. **Continuous Loop**  
+   The system then returns to monitoring, creating a continuous loop of proactive system care.
 
 ---
 
 ## Tech Stack and Tools
+**Programming Languages:**  
+- C# (leveraging the full .NET Framework for Windows-specific APIs)  
+- PowerShell  
 
-- **Programming Languages:**  
-  - C# (.NET 6/7)  
-  - PowerShell scripting  
+**Core Modules:**  
+- **SelfHeal**: C# executable performing system diagnostics and repairs using SFC, DISM, and driver integrity checks.  
+- **CacheCleaner**: C# executable clearing temporary files from `%temp%`, Prefetch, and other locations.  
+- **RestoreGuard**: C# executable using WMI to watch for system events and create restore points.
 
-- **Windows APIs & Services:**  
-  - Volume Shadow Copy Service (VSS)  
-  - Windows Management Instrumentation (WMI)  
-  - Task Scheduler API  
-  - Event Log API  
+**Windows APIs & Services:**  
+- Volume Shadow Copy Service (VSS)  
+- Windows Management Instrumentation (WMI)  
+- Task Scheduler API  
+- Event Log API  
 
-- **UI Framework:**  
-  - WinUI 3 or WPF  
+**UI Framework:**  
+- (Planned) Modern Windows UI framework like **WinUI 3** or **WPF**  
 
-- **Automation and Repair Tools:**  
-  - System File Checker (SFC)  
-  - Deployment Image Servicing and Management (DISM)  
-
-- **Build & Deployment:**  
-  - Visual Studio IDE  
-  - MSIX Packaging or MSI Installer tools  
-
-- **Optional:**  
-  - Azure Application Insights  
+**Build & Deployment:**  
+- Visual Studio IDE  
+- MSIX Packaging  
 
 ---
 
-## Development and Execution Timeline (1 Month)
+## Development and Execution
 
-| Week | Activity                                              | Hours Estimate |
-|------|-------------------------------------------------------|----------------|
-| 1    | Requirements, design, environment setup               | 20             |
-| 2    | Restore Point Automation module                       | 25             |
-| 3    | Automated Repair scripts and background service       | 35             |
-| 4    | Monitoring, UI development, integration, testing      | 50             |
-| 5    | Final polishing, documentation, buffer                | 30             |
-
-**Total:** ~160–180 hours  
-**Team Size:** 3 people working sequentially at 2 hours/day = 180 hours total
+| Week | Activity |
+|------|----------|
+| **1** | Requirements, design, environment setup |
+| **2** | Development of the RestoreGuard module |
+| **3** | Development and refinement of the SelfHeal and CacheCleaner modules |
+| **4** | UI development, module integration, comprehensive testing |
 
 ---
 
-## Knowledge and Software Prerequisites
+## Prerequisites
+**Knowledge:**  
+- Windows system architecture  
+- C# development  
+- Familiarity with Windows repair tools (SFC, DISM)  
+- Software development best practices  
 
-- **Knowledge:**  
-  - Windows system internals and architecture  
-  - Windows API & PowerShell scripting  
-  - C# development and Windows Services  
-  - Familiarity with SFC, DISM, and event log analysis  
-  - Software development practices (version control, testing)
-
-- **Software:**  
-  - Microsoft Visual Studio 2022+  
-  - PowerShell 5.1+  
-  - Windows 10/11 OS  
-  - Windows SDK  
-  - MSIX Packaging Tool or WiX  
-  - Windows Debugging Tools (WinDbg)
+**Software:**  
+- Visual Studio 2022+ (with .NET desktop development workload)  
+- Windows 10/11 OS  
 
 ---
 
-## Additional Notes
-
-- Administrator privileges are required for restore points and repair commands.  
-- Compatibility testing across multiple Windows versions is essential.  
-- Clear documentation and project management are key for sequential collaboration.
+## Important Notes
+- This application **requires administrator privileges** to function correctly.  
+- All C# modules (SelfHeal, CacheCleaner) explicitly request administrator permissions via an application manifest file.  
+- The SelfHeal module performs a **diagnostic scan first** and will only trigger repairs if a problem is detected.
