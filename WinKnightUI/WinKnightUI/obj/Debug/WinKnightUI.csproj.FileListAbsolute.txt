@@ -1,0 +1,14 @@
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.csproj.AssemblyReference.cache
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\App.g.cs
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI_MarkupCompile.cache
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\MainWindow.baml
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\MainWindow.g.cs
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.g.resources
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.Properties.Resources.resources
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.csproj.GenerateResource.cache
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.csproj.CoreCompileInputs.cache
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\bin\Debug\WinKnightUI.exe.config
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\bin\Debug\WinKnightUI.exe
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\bin\Debug\WinKnightUI.pdb
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.exe
+C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.pdb
