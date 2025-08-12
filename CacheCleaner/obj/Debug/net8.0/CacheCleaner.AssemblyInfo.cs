@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CacheCleaner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1ed8cf67ae5c8e03a0629e20c2a00ef585b347a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73b12a1a399cbc6e3f6dbd8852bd7b318376da25")]
 [assembly: System.Reflection.AssemblyProductAttribute("CacheCleaner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CacheCleaner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
