@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "rLy287QCO0E=",
+  "dgSpecHash": "1mEZeCQWl4Y=",
   "success": true,
   "projectFilePath": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\WinKnightUI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Ajith Ashok\\.nuget\\packages\\microsoft.visualbasic\\10.3.0\\microsoft.visualbasic.10.3.0.nupkg.sha512",
+    "C:\\Users\\Ajith Ashok\\.nuget\\packages\\system.codedom\\9.0.8\\system.codedom.9.0.8.nupkg.sha512",
+    "C:\\Users\\Ajith Ashok\\.nuget\\packages\\system.management\\9.0.8\\system.management.9.0.8.nupkg.sha512"
+  ],
   "logs": []
 }

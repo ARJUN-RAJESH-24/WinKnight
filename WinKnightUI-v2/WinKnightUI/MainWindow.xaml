@@ -1,9 +1,4 @@
-﻿<!-- 
-    MainWindow.xaml
-    This file contains the XAML code for the updated user interface of the WinKnight application.
-    It has been redesigned to match the dark, modern dashboard layout, with a dynamic welcome card.
--->
-<Window x:Class="WinKnightUI.MainWindow"
+﻿<Window x:Class="WinKnightUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="WinKnight - System Guardian"
@@ -15,7 +10,6 @@
         AllowsTransparency="True">
 
     <Window.Resources>
-        <!-- Dark Theme Colors -->
         <SolidColorBrush x:Key="BackgroundBrush" Color="#0B1A31"/>
         <SolidColorBrush x:Key="SidebarBrush" Color="#0A1828"/>
         <SolidColorBrush x:Key="CardBackgroundBrush" Color="#182A41"/>
@@ -27,7 +21,6 @@
         <SolidColorBrush x:Key="WarningBrush" Color="#F1C40F"/>
         <SolidColorBrush x:Key="ErrorBrush" Color="#E74C3C"/>
 
-        <!-- Sidebar Button Style -->
         <Style x:Key="SidebarButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="{StaticResource FontSecondary}"/>
@@ -57,7 +50,6 @@
             </Style.Triggers>
         </Style>
 
-        <!-- General Card Style -->
         <Style x:Key="DashboardCard" TargetType="Border">
             <Setter Property="Background" Value="{StaticResource CardBackgroundBrush}"/>
             <Setter Property="CornerRadius" Value="12"/>
@@ -69,9 +61,8 @@
             </Setter>
         </Style>
 
-        <!-- Button style with a border and corner radius -->
         <Style x:Key="ChromeButton" TargetType="Button">
-            <Setter Property="Background" Value="#22FFFFFF"/>
+            <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="{StaticResource FontPrimary}"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Template">
@@ -83,9 +74,13 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#22FFFFFF"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
-        <!-- Updated PillButton Style with ControlTemplate -->
         <Style x:Key="PillButton" TargetType="Button">
             <Setter Property="Background" Value="{StaticResource AccentBlue}"/>
             <Setter Property="Foreground" Value="White"/>
@@ -108,6 +103,27 @@
             </Style.Triggers>
         </Style>
 
+        <Style x:Key="MetricCardButton" TargetType="Button">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Style="{StaticResource DashboardCard}"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#25354D"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
 
     <Grid>
@@ -116,32 +132,28 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Sidebar -->
         <Grid Grid.Column="0" Background="{StaticResource SidebarBrush}">
             <StackPanel Margin="20,30,20,0">
-                <TextBlock Text="WIN KNIGHT" 
-                           Foreground="{StaticResource FontPrimary}" 
-                           FontSize="20" 
-                           FontWeight="Bold" 
+                <TextBlock Text="WIN KNIGHT"
+                           Foreground="{StaticResource FontPrimary}"
+                           FontSize="20"
+                           FontWeight="Bold"
                            HorizontalAlignment="Center"
                            Margin="0,0,0,30"/>
 
-                <!-- Sidebar Buttons -->
                 <Button Content="Dashboard" Style="{StaticResource SidebarButton}"/>
                 <Button Content="Restore Points" Style="{StaticResource SidebarButton}"/>
                 <Button Content="Settings" Style="{StaticResource SidebarButton}"/>
+
             </StackPanel>
         </Grid>
 
-        <!-- Main Content Area -->
         <Grid Grid.Column="1" Margin="25">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!-- Top Bar -->
             <Grid Grid.Row="0" Margin="0,0,0,25">
                 <TextBlock Text="Dashboard"
                            Foreground="{StaticResource FontPrimary}"
@@ -155,84 +167,214 @@
                 </StackPanel>
             </Grid>
 
-            <!-- Cards Section -->
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-
-                <!-- Welcome Card -->
-                <Border Grid.ColumnSpan="2" Style="{StaticResource DashboardCard}" Margin="0,0,15,15" Height="250">
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Grid.Column="0" Width="100" Height="100" Margin="0,0,20,0">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="https://placehold.co/100x100/3498DB/FFFFFF?text=AVATAR"/>
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                            <TextBlock Text="Welcome back," Foreground="{StaticResource FontPrimary}" FontSize="24" FontWeight="SemiBold"/>
-                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0" VerticalAlignment="Center">
-                                <TextBlock x:Name="WelcomeNameText" Text="Mark Johnson" Foreground="{StaticResource FontPrimary}" FontSize="48" FontWeight="Bold" VerticalAlignment="Center"/>
-                                <Image x:Name="WelcomeImage" Margin="20,0,0,0" Height="120" Width="120" Stretch="UniformToFill" VerticalAlignment="Center"/>
+
+                        <Border Grid.ColumnSpan="2" Style="{StaticResource DashboardCard}" Margin="0,0,15,15" Height="250">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Ellipse Grid.Column="0" Width="100" Height="100" Margin="0,0,20,0">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="https://placehold.co/100x100/3498DB/FFFFFF?text=AVATAR"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                    <TextBlock Text="Welcome back," Foreground="{StaticResource FontPrimary}" FontSize="24" FontWeight="SemiBold"/>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0" VerticalAlignment="Center">
+                                        <TextBlock x:Name="WelcomeNameText" Text="Mark Johnson" Foreground="{StaticResource FontPrimary}" FontSize="48" FontWeight="Bold" VerticalAlignment="Center"/>
+                                        <Image x:Name="WelcomeImage" Margin="20,0,0,0" Height="120" Width="120" Stretch="UniformToFill" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <TextBlock Text="Glad to see you again!" Foreground="{StaticResource FontPrimary}" FontSize="18" Margin="0,10,0,0"/>
+                                    <TextBlock Text="Ask me anything." Foreground="{StaticResource FontPrimary}" FontSize="18" Margin="0,5,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Column="2" Style="{StaticResource DashboardCard}" Margin="0,0,0,15">
+                            <StackPanel>
+                                <TextBlock Text="RestoreGuard" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                <TextBlock Text="Create a new system restore point" Foreground="{StaticResource FontSecondary}" Margin="0,5,0,15"/>
+                                <Button x:Name="CreateRestoreButton" Content="Create Manual Restore Point" Style="{StaticResource PillButton}" Click="CreateRestore_Click"/>
+                                <StackPanel Orientation="Horizontal" Margin="0,15,0,0" HorizontalAlignment="Center">
+                                    <TextBlock Text="Last backup:" Foreground="{StaticResource FontSecondary}"/>
+                                    <TextBlock x:Name="LastRestoreText" Text=" N/A" Foreground="{StaticResource FontPrimary}"/>
+                                </StackPanel>
                             </StackPanel>
-                            <TextBlock Text="Glad to see you again!" Foreground="{StaticResource FontPrimary}" FontSize="18" Margin="0,10,0,0"/>
-                            <TextBlock Text="Ask me anything." Foreground="{StaticResource FontPrimary}" FontSize="18" Margin="0,5,0,0"/>
-                        </StackPanel>
+                        </Border>
                     </Grid>
-                </Border>
 
-                <!-- Restore Point Card -->
-                <Border Grid.Column="2" Style="{StaticResource DashboardCard}" Margin="0,0,0,15">
-                    <StackPanel>
-                        <TextBlock Text="RestoreGuard" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
-                        <TextBlock Text="Create a new system restore point" Foreground="{StaticResource FontSecondary}" Margin="0,5,0,15"/>
-                        <Button x:Name="CreateRestoreButton" Content="Create Manual Restore Point" Style="{StaticResource PillButton}" Click="CreateRestore_Click"/>
-                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0" HorizontalAlignment="Center">
-                            <TextBlock Text="Last backup:" Foreground="{StaticResource FontSecondary}"/>
-                            <TextBlock x:Name="LastRestoreText" Text=" N/A" Foreground="{StaticResource FontPrimary}"/>
-                        </StackPanel>
-                    </StackPanel>
-                </Border>
-            </Grid>
+                    <Grid Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-            <!-- Remaining Cards Section -->
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
+                            <Grid>
+                                <Button Style="{StaticResource MetricCardButton}" Click="CpuTemp_Click">
+                                    <Viewbox Stretch="Uniform">
+                                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                <TextBlock Text="🌡️" Foreground="{StaticResource FontPrimary}" FontSize="24" Margin="0,0,10,0"/>
+                                                <TextBlock Text="CPU Temp" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                            </StackPanel>
+                                            <TextBlock x:Name="CpuTempText" Text="--°C" Foreground="{StaticResource FontPrimary}" FontSize="50" FontWeight="Bold"/>
+                                        </StackPanel>
+                                    </Viewbox>
+                                </Button>
+                                <Button x:Name="TempWarningButton" Click="TempWarning_Click" Cursor="Hand" Background="Transparent" BorderThickness="0" Padding="0"
+                                        HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" Margin="0, -10, -10, 0">
+                                    <Border x:Name="TempWarningBox" Background="#E74C3C" CornerRadius="5" Padding="5">
+                                        <TextBlock Text="!" FontWeight="Bold" Foreground="White" FontSize="16"/>
+                                        <Border.Style>
+                                            <Style TargetType="Border">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Visibility, ElementName=TempWarningButton}" Value="Visible">
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Name="BlinkAnimationStoryboard">
+                                                                <Storyboard RepeatBehavior="Forever">
+                                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1.0" To="0.2" Duration="0:0:0.5" AutoReverse="True"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <StopStoryboard BeginStoryboardName="BlinkAnimationStoryboard"/>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                    </Border>
+                                </Button>
+                            </Grid>
+                        </Border>
 
-                <!-- Manual Scan Card -->
-                <Border Grid.Column="0" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
-                    <StackPanel>
-                        <TextBlock Text="System Scan" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
-                        <TextBlock Text="Run diagnostics to check for issues" Foreground="{StaticResource FontSecondary}" Margin="0,5,0,15"/>
-                        <Button x:Name="RunScanButton" Content="Run Full System Scan" Style="{StaticResource PillButton}" Click="RunScan_Click"/>
-                        <ProgressBar x:Name="ScanProgressBar" Height="8" Margin="0,15,0,0" IsIndeterminate="False"/>
-                    </StackPanel>
-                </Border>
+                        <Border Grid.Column="1" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
+                            <Grid>
+                                <Button Style="{StaticResource MetricCardButton}" Click="RamUsage_Click">
+                                    <Viewbox Stretch="Uniform">
+                                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                <TextBlock Text="💾" Foreground="{StaticResource FontPrimary}" FontSize="24" Margin="0,0,10,0"/>
+                                                <TextBlock Text="RAM Usage" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                            </StackPanel>
+                                            <TextBlock x:Name="RamUsageText" Text="--%" Foreground="{StaticResource FontPrimary}" FontSize="50" FontWeight="Bold"/>
+                                        </StackPanel>
+                                    </Viewbox>
+                                </Button>
+                                <Button x:Name="RamWarningButton" Click="RamWarning_Click" Cursor="Hand" Background="Transparent" BorderThickness="0" Padding="0"
+                                        HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" Margin="0, -10, -10, 0">
+                                    <Border x:Name="RamWarningBox" Background="#E74C3C" CornerRadius="5" Padding="5">
+                                        <TextBlock Text="!" FontWeight="Bold" Foreground="White" FontSize="16"/>
+                                        <Border.Style>
+                                            <Style TargetType="Border">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Visibility, ElementName=RamWarningButton}" Value="Visible">
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Name="BlinkAnimationStoryboard2">
+                                                                <Storyboard RepeatBehavior="Forever">
+                                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1.0" To="0.2" Duration="0:0:0.5" AutoReverse="True"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <StopStoryboard BeginStoryboardName="BlinkAnimationStoryboard2"/>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                    </Border>
+                                </Button>
+                            </Grid>
+                        </Border>
 
-                <!-- Report and Log Card -->
-                <Border Grid.Column="1" Style="{StaticResource DashboardCard}">
-                    <StackPanel>
-                        <TextBlock Text="Activity Log" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
-                        <TextBlock x:Name="CurrentStatusText" Text="Idle..." Foreground="{StaticResource FontSecondary}" Margin="0,5,0,10"/>
-                        <ScrollViewer VerticalScrollBarVisibility="Auto" Height="300">
-                            <TextBlock x:Name="ReportLogText" Text="Scan reports will appear here..." Foreground="{StaticResource FontPrimary}" TextWrapping="Wrap" FontSize="13" LineHeight="18"/>
-                        </ScrollViewer>
-                    </StackPanel>
-                </Border>
-            </Grid>
+                        <Border Grid.Column="2" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
+                            <Button Style="{StaticResource MetricCardButton}" Click="DiskHealth_Click">
+                                <Viewbox Stretch="Uniform">
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                            <TextBlock Text="💽" Foreground="{StaticResource FontPrimary}" FontSize="24" Margin="0,0,10,0"/>
+                                            <TextBlock Text="Disk Health" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                        </StackPanel>
+                                        <TextBlock x:Name="DiskHealthText" Text="Good" Foreground="{StaticResource FontPrimary}" FontSize="40" FontWeight="Bold">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Text, ElementName=DiskHealthText}" Value="Low Disk Space">
+                                                            <DataTrigger.EnterActions>
+                                                                <BeginStoryboard Name="BlinkAnimationStoryboard3">
+                                                                    <Storyboard RepeatBehavior="Forever">
+                                                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1.0" To="0.2" Duration="0:0:0.5" AutoReverse="True"/>
+                                                                    </Storyboard>
+                                                                </BeginStoryboard>
+                                                            </DataTrigger.EnterActions>
+                                                            <DataTrigger.ExitActions>
+                                                                <StopStoryboard BeginStoryboardName="BlinkAnimationStoryboard3"/>
+                                                            </DataTrigger.ExitActions>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Viewbox>
+                            </Button>
+                        </Border>
+
+                        <Border Grid.Column="3" Style="{StaticResource DashboardCard}">
+                            <Button Style="{StaticResource MetricCardButton}" Click="StartupManager_Click">
+                                <Viewbox Stretch="Uniform">
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                            <TextBlock Text="🚀" Foreground="{StaticResource FontPrimary}" FontSize="24" Margin="0,0,10,0"/>
+                                            <TextBlock Text="Startup Manager" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                        </StackPanel>
+                                        <TextBlock x:Name="StartupProgramsText" Text="--" Foreground="{StaticResource FontPrimary}" FontSize="50" FontWeight="Bold"/>
+                                    </StackPanel>
+                                </Viewbox>
+                            </Button>
+                        </Border>
+                    </Grid>
+
+                    <Grid Margin="0,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
+                            <StackPanel>
+                                <TextBlock Text="System Scan" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                <TextBlock Text="Run diagnostics to check for issues" Foreground="{StaticResource FontSecondary}" Margin="0,5,0,15"/>
+                                <Button x:Name="RunScanButton" Content="Run Full System Scan" Style="{StaticResource PillButton}" Click="RunScan_Click"/>
+                                <ProgressBar x:Name="ScanProgressBar" Height="8" Margin="0,15,0,0" IsIndeterminate="False"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Grid.Column="1" Style="{StaticResource DashboardCard}">
+                            <StackPanel>
+                                <TextBlock Text="Activity Log" Foreground="{StaticResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                <TextBlock x:Name="CurrentStatusText" Text="Idle..." Foreground="{StaticResource FontSecondary}" Margin="0,5,0,10"/>
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" Height="300">
+                                    <TextBlock x:Name="ReportLogText" Text="Scan reports will appear here..." Foreground="{StaticResource FontPrimary}" TextWrapping="Wrap" FontSize="13" LineHeight="18"/>
+                                </ScrollViewer>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Window>

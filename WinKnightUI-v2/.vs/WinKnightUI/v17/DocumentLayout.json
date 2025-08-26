@@ -3,24 +3,83 @@
   "WorkspaceRootPath": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\winknightui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\winknightui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\diskmonitorpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\diskmonitorpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\winknightcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\winknightcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\tempgraphpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\tempgraphpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\tempgraphpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\tempgraphpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\startupmanagerpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\startupmanagerpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\startupmanagerpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\startupmanagerpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\ramusagepopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\ramusagepopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\ramusagepopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\ramusagepopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\highramusagewarning.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\highramusagewarning.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\highramusagewarning.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\highramusagewarning.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\diskmonitorpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\diskmonitorpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\booltoenabledtextconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\booltoenabledtextconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ajith Ashok\\AppData\\Local\\Temp\\.vsdbgsrc\\aad6be2495d0a786b94b3514a5b6903407fe2d6a75ad7e505df6a9d895927867\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\app1.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\app1.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|c:\\users\\ajith ashok\\source\\repos\\winknightui\\winknightui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AB65E1D7-DB68-4383-8359-E673D304B463}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +89,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 18,
               "Title": "app1.manifest",
               "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\app1.manifest",
               "RelativeDocumentMoniker": "WinKnightUI\\app1.manifest",
@@ -43,58 +102,230 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
               "WhenOpened": "2025-08-18T18:15:13.297Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TempGraphPopup.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\TempGraphPopup.xaml.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\TempGraphPopup.xaml.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\TempGraphPopup.xaml.cs",
+              "RelativeToolTip": "WinKnightUI\\TempGraphPopup.xaml.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAwGwAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T06:17:09.623Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WinKnightCore.cs",
-              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\WinKnightCore.cs",
-              "RelativeDocumentMoniker": "WinKnightUI\\WinKnightCore.cs",
-              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\WinKnightCore.cs",
-              "RelativeToolTip": "WinKnightUI\\WinKnightCore.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAP4AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T17:56:45.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\App.xaml",
-              "RelativeDocumentMoniker": "WinKnightUI\\App.xaml",
-              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\App.xaml",
-              "RelativeToolTip": "WinKnightUI\\App.xaml",
+              "Title": "DiskMonitorPopup.xaml",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\DiskMonitorPopup.xaml",
+              "RelativeDocumentMoniker": "WinKnightUI\\DiskMonitorPopup.xaml",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\DiskMonitorPopup.xaml",
+              "RelativeToolTip": "WinKnightUI\\DiskMonitorPopup.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-18T18:13:12.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T04:53:58.281Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "WinKnightUI\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\MainWindow.xaml",
               "RelativeToolTip": "WinKnightUI\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-18T18:30:01.687Z",
+              "WhenOpened": "2025-08-18T18:30:01.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WinKnightUI.csproj",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\WinKnightUI.csproj",
+              "RelativeDocumentMoniker": "WinKnightUI\\WinKnightUI.csproj",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\WinKnightUI.csproj",
+              "RelativeToolTip": "WinKnightUI\\WinKnightUI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-19T05:12:05.375Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
+              "Title": "StartupManagerPopup.xaml",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\StartupManagerPopup.xaml",
+              "RelativeDocumentMoniker": "WinKnightUI\\StartupManagerPopup.xaml",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\StartupManagerPopup.xaml",
+              "RelativeToolTip": "WinKnightUI\\StartupManagerPopup.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-19T04:54:34.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TempGraphPopup.xaml",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\TempGraphPopup.xaml",
+              "RelativeDocumentMoniker": "WinKnightUI\\TempGraphPopup.xaml",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\TempGraphPopup.xaml",
+              "RelativeToolTip": "WinKnightUI\\TempGraphPopup.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-19T06:16:55.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WinKnightCore.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\WinKnightCore.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\WinKnightCore.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\WinKnightCore.cs",
+              "RelativeToolTip": "WinKnightUI\\WinKnightCore.cs",
+              "ViewState": "AgIAAPYBAAAAAAAAAAAuwFUCAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T17:56:45.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StartupManagerPopup.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\StartupManagerPopup.xaml.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\StartupManagerPopup.xaml.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\StartupManagerPopup.xaml.cs",
+              "RelativeToolTip": "WinKnightUI\\StartupManagerPopup.xaml.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T04:54:42.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RamUsagePopup.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\RamUsagePopup.xaml.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\RamUsagePopup.xaml.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\RamUsagePopup.xaml.cs",
+              "RelativeToolTip": "WinKnightUI\\RamUsagePopup.xaml.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwEQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T04:42:06.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RamUsagePopup.xaml",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\RamUsagePopup.xaml",
+              "RelativeDocumentMoniker": "WinKnightUI\\RamUsagePopup.xaml",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\RamUsagePopup.xaml",
+              "RelativeToolTip": "WinKnightUI\\RamUsagePopup.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-19T04:41:44.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "WinKnightUI\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\MainWindow.xaml.cs",
               "RelativeToolTip": "WinKnightUI\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAkwJUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAAwNkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T17:54:48.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T17:54:48.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HighRamUsageWarning.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\HighRamUsageWarning.xaml.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\HighRamUsageWarning.xaml.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\HighRamUsageWarning.xaml.cs",
+              "RelativeToolTip": "WinKnightUI\\HighRamUsageWarning.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T06:07:53.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HighRamUsageWarning.xaml",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\HighRamUsageWarning.xaml",
+              "RelativeDocumentMoniker": "WinKnightUI\\HighRamUsageWarning.xaml",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\HighRamUsageWarning.xaml",
+              "RelativeToolTip": "WinKnightUI\\HighRamUsageWarning.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-19T06:07:41.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DiskMonitorPopup.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\DiskMonitorPopup.xaml.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\DiskMonitorPopup.xaml.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\DiskMonitorPopup.xaml.cs",
+              "RelativeToolTip": "WinKnightUI\\DiskMonitorPopup.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwB4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T04:54:09.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BoolToEnabledTextConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\BoolToEnabledTextConverter.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\BoolToEnabledTextConverter.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\BoolToEnabledTextConverter.cs",
+              "RelativeToolTip": "WinKnightUI\\BoolToEnabledTextConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T04:59:14.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BoolToColorConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\BoolToColorConverter.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\BoolToColorConverter.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\BoolToColorConverter.cs",
+              "RelativeToolTip": "WinKnightUI\\BoolToColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T05:23:40.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\AssemblyInfo.cs",
+              "RelativeToolTip": "WinKnightUI\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T05:13:50.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "XamlReader.cs",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\AppData\\Local\\Temp\\.vsdbgsrc\\aad6be2495d0a786b94b3514a5b6903407fe2d6a75ad7e505df6a9d895927867\\XamlReader.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\aad6be2495d0a786b94b3514a5b6903407fe2d6a75ad7e505df6a9d895927867\\XamlReader.cs",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\AppData\\Local\\Temp\\.vsdbgsrc\\aad6be2495d0a786b94b3514a5b6903407fe2d6a75ad7e505df6a9d895927867\\XamlReader.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\aad6be2495d0a786b94b3514a5b6903407fe2d6a75ad7e505df6a9d895927867\\XamlReader.cs [Read Only]",
+              "ViewState": "AgIAAKEBAAAAAAAAAAAkwKoBAAADAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T06:51:58.799Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\App.xaml",
+              "RelativeDocumentMoniker": "WinKnightUI\\App.xaml",
+              "ToolTip": "C:\\Users\\Ajith Ashok\\source\\repos\\WinKnightUI\\WinKnightUI\\App.xaml",
+              "RelativeToolTip": "WinKnightUI\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-18T18:13:12.864Z"
             }
           ]
         }

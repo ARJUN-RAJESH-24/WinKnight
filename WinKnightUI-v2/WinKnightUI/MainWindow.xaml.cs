@@ -1,26 +1,29 @@
-﻿// 
-// MainWindow.xaml.cs
-// This file contains the C# code-behind for the WPF application.
-// It handles UI events, updates the display, and calls the core logic.
-//
-
-using System;
+﻿using System;
 using System.Text;
 using System.Windows;
 using System.Windows.Input;
 using System.Threading.Tasks;
+using System.Windows.Threading;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace WinKnightUI
 {
     public partial class MainWindow : Window
     {
         private WinKnightCore _winKnightCore;
+        private DispatcherTimer? _metricsTimer;
+        private bool _isTempWarningActive = false;
+        private bool _isRamWarningActive = false;
+
+        private double _warningTempAtTime = 0.0;
+        private int _warningRamAtTime = 0;
 
         public MainWindow()
         {
             InitializeComponent();
+            _winKnightCore = new WinKnightCore();
 
-            // Allow the window to be dragged by the top bar.
             this.MouseLeftButtonDown += (sender, e) => {
                 if (e.LeftButton == MouseButtonState.Pressed)
                 {
@@ -28,57 +31,141 @@ namespace WinKnightUI
                 }
             };
 
-            // Check for admin privileges on startup.
             if (!WinKnightCore.IsAdministrator())
             {
                 MessageBox.Show("WinKnight must be run with administrator privileges to perform system repairs. Please restart as an administrator.", "Permission Denied", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            // Initialize the core logic class
-            _winKnightCore = new WinKnightCore();
-
-            // Set the welcome text to the current user's name
             string userName = Environment.UserName;
             WelcomeNameText.Text = userName;
+
+            StartMetricsTimer();
+        }
+
+        private void StartMetricsTimer()
+        {
+            _metricsTimer = new DispatcherTimer();
+            _metricsTimer.Interval = TimeSpan.FromSeconds(1);
+            _metricsTimer.Tick += MetricsTimer_Tick;
+            _metricsTimer.Start();
+        }
+
+        private async void MetricsTimer_Tick(object? sender, EventArgs e)
+        {
+            var temp = await _winKnightCore.GetCpuTemperature();
+            if (temp > -1)
+            {
+                CpuTempText.Text = $"{temp}°C";
+
+                if (temp > 80 && !_isTempWarningActive)
+                {
+                    _isTempWarningActive = true;
+                    _warningTempAtTime = temp;
+                }
+                TempWarningButton.Visibility = _isTempWarningActive ? Visibility.Visible : Visibility.Collapsed;
+            }
+            else
+            {
+                CpuTempText.Text = "N/A";
+                TempWarningButton.Visibility = Visibility.Collapsed;
+            }
+
+            var ramUsage = await _winKnightCore.GetRamUsage();
+            RamUsageText.Text = $"{ramUsage}%";
+
+            if (ramUsage > 85 && !_isRamWarningActive)
+            {
+                _isRamWarningActive = true;
+                _warningRamAtTime = ramUsage;
+            }
+            RamWarningButton.Visibility = _isRamWarningActive ? Visibility.Visible : Visibility.Collapsed;
+
+            var diskStatus = await _winKnightCore.GetDiskHealthStatus();
+            DiskHealthText.Text = diskStatus.Status;
+
+            var startupCount = await _winKnightCore.GetStartupProgramsCount();
+            StartupProgramsText.Text = startupCount.ToString();
         }
 
         #region Window chrome handlers
-        // Minimizes the window
         private void Minimize_Click(object sender, RoutedEventArgs e) => WindowState = WindowState.Minimized;
-        // Toggles between maximized and normal window state
         private void MaxRestore_Click(object sender, RoutedEventArgs e) => ToggleMaxRestore();
         private void ToggleMaxRestore() => WindowState = (WindowState == WindowState.Maximized) ? WindowState.Normal : WindowState.Maximized;
-        // Closes the application
         private void Close_Click(object sender, RoutedEventArgs e) => Close();
         #endregion
 
         #region Application Logic
-        // Handles the "Run Full System Scan" button click.
+        private void CpuTemp_Click(object sender, RoutedEventArgs e)
+        {
+            var popup = new TempGraphPopup(_winKnightCore);
+            popup.ShowDialog();
+        }
+
+        private async void TempWarning_Click(object sender, RoutedEventArgs e)
+        {
+            var topProcess = await _winKnightCore.GetTopCpuProcess();
+
+            string message = $"A high CPU temperature was detected.\n\n";
+            message += $"Highest temperature: {_warningTempAtTime}°C\n";
+            message += $"Possible cause: '{topProcess}'\n";
+
+            MessageBox.Show(message, "CPU Temperature Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+            _isTempWarningActive = false;
+            TempWarningButton.Visibility = Visibility.Collapsed;
+        }
+
+        private async void RamUsage_Click(object sender, RoutedEventArgs e)
+        {
+            var allProcesses = await _winKnightCore.GetTopRamProcess();
+            var popup = new RamUsagePopup(allProcesses, _winKnightCore);
+            popup.ShowDialog();
+        }
+
+        private async void RamWarning_Click(object sender, RoutedEventArgs e)
+        {
+            var topProcess = (await _winKnightCore.GetTopRamProcess()).FirstOrDefault();
+            if (topProcess != null)
+            {
+                var popup = new HighRamUsageWarning(topProcess.Name, _winKnightCore);
+                popup.ShowDialog();
+            }
+
+            _isRamWarningActive = false;
+            RamWarningButton.Visibility = Visibility.Collapsed;
+        }
+
+        private async void DiskHealth_Click(object sender, RoutedEventArgs e)
+        {
+            var drives = await _winKnightCore.GetDiskHealthDetails();
+            var popup = new DiskMonitorPopup(drives, _winKnightCore);
+            popup.ShowDialog();
+        }
+
+        private async void StartupManager_Click(object sender, RoutedEventArgs e)
+        {
+            var startupPrograms = await _winKnightCore.GetStartupPrograms();
+            var popup = new StartupManagerPopup(startupPrograms, _winKnightCore);
+            popup.ShowDialog();
+        }
+
         private async void RunScan_Click(object sender, RoutedEventArgs e)
         {
-            // Disable buttons to prevent re-running the scan
             RunScanButton.IsEnabled = false;
             CreateRestoreButton.IsEnabled = false;
             ScanProgressBar.IsIndeterminate = true;
+            ReportLogText.Text = string.Empty;
 
             var logBuilder = new StringBuilder();
-            ReportLogText.Text = string.Empty; // Clear the previous log
 
-            // Step 1: Create a System Restore Point
             CurrentStatusText.Text = "Creating system restore point...";
             var restoreReport = await _winKnightCore.CreateSystemRestorePoint("WinKnight Automated Scan");
             logBuilder.AppendLine($"[RestoreGuard] {restoreReport.Message}");
             ReportLogText.Text = logBuilder.ToString();
 
-            // If the restore point creation fails, alert the user and stop the scan.
             if (!restoreReport.IsSuccessful)
             {
-                MessageBox.Show(
-                    "Creating a system restore point failed. Please enable System Restore in Windows and try again.",
-                    "System Restore Disabled",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Warning
-                );
+                MessageBox.Show("Creating a system restore point failed. Please enable System Restore in Windows and try again.", "System Restore Disabled", MessageBoxButton.OK, MessageBoxImage.Warning);
                 CurrentStatusText.Text = "Scan failed.";
                 ScanProgressBar.IsIndeterminate = false;
                 RunScanButton.IsEnabled = true;
@@ -87,36 +174,30 @@ namespace WinKnightUI
             }
             else
             {
-                // Update the last backup time on success
                 LastRestoreText.Text = DateTime.Now.ToString("g");
             }
 
-            // Step 2: Run SFC
             CurrentStatusText.Text = "Running System File Checker (SFC)...";
             var sfcReport = await _winKnightCore.RunSfcScan();
             logBuilder.AppendLine($"[SelfHeal] {sfcReport.Message}");
             ReportLogText.Text = logBuilder.ToString();
 
-            // Step 3: Run DISM
             CurrentStatusText.Text = "Running Deployment Image Servicing and Management (DISM)...";
             var dismReport = await _winKnightCore.RunDismRepair();
             logBuilder.AppendLine($"[SelfHeal] {dismReport.Message}");
             ReportLogText.Text = logBuilder.ToString();
 
-            // Step 4: Clean Cache
             CurrentStatusText.Text = "Clearing temporary files...";
             var cacheReport = await _winKnightCore.CleanCache();
             logBuilder.AppendLine($"[CacheCleaner] {cacheReport.Message}");
             ReportLogText.Text = logBuilder.ToString();
 
-            // Final message and re-enable buttons
             CurrentStatusText.Text = "Scan Complete.";
             ScanProgressBar.IsIndeterminate = false;
             RunScanButton.IsEnabled = true;
             CreateRestoreButton.IsEnabled = true;
         }
 
-        // Handles the "Create Manual Restore Point" button click.
         private async void CreateRestore_Click(object sender, RoutedEventArgs e)
         {
             CreateRestoreButton.IsEnabled = false;
@@ -124,21 +205,14 @@ namespace WinKnightUI
 
             var report = await _winKnightCore.CreateSystemRestorePoint("WinKnight Manual Backup");
 
-            // Check if the restore point was successfully created.
             if (report.IsSuccessful)
             {
                 MessageBox.Show(report.Message, "Restore Point", MessageBoxButton.OK, MessageBoxImage.Information);
-                // Update the last backup time on success
                 LastRestoreText.Text = DateTime.Now.ToString("g");
             }
             else
             {
-                MessageBox.Show(
-                    "Creating a system restore point failed. Please enable System Restore in Windows and try again.",
-                    "System Restore Disabled",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Warning
-                );
+                MessageBox.Show("Creating a system restore point failed. Please enable System Restore in Windows and try again.", "System Restore Disabled", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
             CurrentStatusText.Text = "Idle...";
