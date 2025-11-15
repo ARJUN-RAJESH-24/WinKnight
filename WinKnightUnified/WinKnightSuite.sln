@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheCleaner", "CacheCleaner\CacheCleaner.csproj", "{48DAFCF1-DF39-4120-B9F7-E65F18940300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHeal", "SelfHeal\SelfHeal.csproj", "{42E53634-6884-49DB-A64C-B5D0E6423FCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsUpdateManager", "WindowsUpdateManager\WindowsUpdateManager.csproj", "{1803B275-F388-41F7-96C8-71066799488E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinKnightUI", "WinKnightUI\WinKnightUI.csproj", "{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48DAFCF1-DF39-4120-B9F7-E65F18940300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48DAFCF1-DF39-4120-B9F7-E65F18940300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48DAFCF1-DF39-4120-B9F7-E65F18940300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48DAFCF1-DF39-4120-B9F7-E65F18940300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E53634-6884-49DB-A64C-B5D0E6423FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E53634-6884-49DB-A64C-B5D0E6423FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E53634-6884-49DB-A64C-B5D0E6423FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E53634-6884-49DB-A64C-B5D0E6423FCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1803B275-F388-41F7-96C8-71066799488E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1803B275-F388-41F7-96C8-71066799488E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1803B275-F388-41F7-96C8-71066799488E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1803B275-F388-41F7-96C8-71066799488E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

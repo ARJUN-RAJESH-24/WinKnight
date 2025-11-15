@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD186CD4-AB26-42B4-ACC1-334ADC990D18}|WinKnightUI\\WinKnightUI.csproj|D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUI\\winknightui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD186CD4-AB26-42B4-ACC1-334ADC990D18}|WinKnightUI\\WinKnightUI.csproj|d:\\notes and projects\\project\\winknight\\winknightui\\winknightui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD186CD4-AB26-42B4-ACC1-334ADC990D18}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD186CD4-AB26-42B4-ACC1-334ADC990D18}|WinKnightUI\\WinKnightUI.csproj|d:\\notes and projects\\project\\winknight\\winknightui\\winknightui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{BD186CD4-AB26-42B4-ACC1-334ADC990D18}|WinKnightUI\\WinKnightUI.csproj|D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUI\\winknightui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BD186CD4-AB26-42B4-ACC1-334ADC990D18}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -29,8 +29,7 @@
               "ToolTip": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUI\\WinKnightUI\\MainWindow.xaml",
               "RelativeToolTip": "WinKnightUI\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-09T19:01:14.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-09T19:01:14.14Z"
             },
             {
               "$type": "Document",

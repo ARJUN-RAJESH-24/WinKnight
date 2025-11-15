@@ -12,3 +12,5 @@ C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\bin
 C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\bin\Debug\WinKnightUI.pdb
 C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.exe
 C:\Users\yadhu\OneDrive\Documents\Projects\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.pdb
+D:\Notes and Projects\Project\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.exe
+D:\Notes and Projects\Project\WinKnight\WinKnightUI\WinKnightUI\obj\Debug\WinKnightUI.pdb
