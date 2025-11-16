@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Notes and Projects\\Project\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj": {}
+    "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj": {}
   },
   "projects": {
-    "D:\\Notes and Projects\\Project\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj": {
+    "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Notes and Projects\\Project\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj",
+        "projectUniqueName": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj",
         "projectName": "SelfHeal",
-        "projectPath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj",
+        "projectPath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj",
         "packagesPath": "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\",
-        "outputPath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\SelfHeal\\obj\\",
+        "outputPath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\SelfHeal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

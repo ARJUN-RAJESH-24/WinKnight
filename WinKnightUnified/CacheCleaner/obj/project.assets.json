@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Notes and Projects\\Project\\WinKnightUnified\\CacheCleaner\\CacheCleaner.csproj",
+      "projectUniqueName": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\CacheCleaner\\CacheCleaner.csproj",
       "projectName": "CacheCleaner",
-      "projectPath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\CacheCleaner\\CacheCleaner.csproj",
+      "projectPath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\CacheCleaner\\CacheCleaner.csproj",
       "packagesPath": "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\",
-      "outputPath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\CacheCleaner\\obj\\",
+      "outputPath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\CacheCleaner\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

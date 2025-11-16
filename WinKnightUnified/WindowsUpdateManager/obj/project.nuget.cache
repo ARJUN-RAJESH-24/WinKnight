@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6RN2EEV/qxo=",
+  "dgSpecHash": "tOzn7J2d94Y=",
   "success": true,
-  "projectFilePath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\WindowsUpdateManager\\WindowsUpdateManager.csproj",
+  "projectFilePath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\WindowsUpdateManager\\WindowsUpdateManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

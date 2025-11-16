@@ -10,6 +10,8 @@ namespace WinKnightUI
     {
         private WinKnightCore _winKnightCore;
 
+        // --- THIS IS THE FIX ---
+        // Changed "DriveInfo" back to your original class "DiskInfo"
         public DiskMonitorPopup(List<DiskInfo> drives, WinKnightCore core)
         {
             InitializeComponent();
@@ -22,6 +24,18 @@ namespace WinKnightUI
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void MaxRestore_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = (this.WindowState == WindowState.Maximized)
+                ? WindowState.Normal
+                : WindowState.Maximized;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

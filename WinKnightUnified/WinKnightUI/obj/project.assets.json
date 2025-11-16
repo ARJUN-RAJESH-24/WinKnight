@@ -576,11 +576,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Notes and Projects\\Project\\WinKnightUnified\\WinKnightUI\\WinKnightUI.csproj",
+      "projectUniqueName": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\WinKnightUI\\WinKnightUI.csproj",
       "projectName": "WinKnightUI",
-      "projectPath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\WinKnightUI\\WinKnightUI.csproj",
+      "projectPath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\WinKnightUI\\WinKnightUI.csproj",
       "packagesPath": "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\",
-      "outputPath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\WinKnightUI\\obj\\",
+      "outputPath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\WinKnightUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -601,11 +601,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "D:\\Notes and Projects\\Project\\WinKnightUnified\\CacheCleaner\\CacheCleaner.csproj": {
-              "projectPath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\CacheCleaner\\CacheCleaner.csproj"
+            "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\CacheCleaner\\CacheCleaner.csproj": {
+              "projectPath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\CacheCleaner\\CacheCleaner.csproj"
             },
-            "D:\\Notes and Projects\\Project\\WinKnightUnified\\WindowsUpdateManager\\WindowsUpdateManager.csproj": {
-              "projectPath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\WindowsUpdateManager\\WindowsUpdateManager.csproj"
+            "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\WindowsUpdateManager\\WindowsUpdateManager.csproj": {
+              "projectPath": "D:\\Notes and Projects\\Project\\WinKnight\\WinKnightUnified\\WindowsUpdateManager\\WindowsUpdateManager.csproj"
             }
           }
         }

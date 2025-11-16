@@ -9,13 +9,13 @@
       "SelfHeal/1.0.0": {
         "dependencies": {
           "System.Diagnostics.EventLog": "4.7.0",
-          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.22000.57"
+          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.22000.56"
         },
         "runtime": {
           "SelfHeal.dll": {}
         }
       },
-      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22000.57": {
+      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22000.56": {
         "runtime": {
           "Microsoft.Windows.SDK.NET.dll": {
             "assemblyVersion": "10.0.22000.38",
@@ -70,7 +70,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22000.57": {
+    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22000.56": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
