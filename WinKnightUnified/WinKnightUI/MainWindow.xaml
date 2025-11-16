@@ -66,24 +66,34 @@
             </Setter>
         </Style>
 
-        <Style x:Key="ChromeButton" TargetType="Button">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="{DynamicResource FontPrimary}"/>
+        <!-- macOS Style Window Control Buttons -->
+        <Style x:Key="MacOSButton" TargetType="Button">
+            <Setter Property="Width" Value="16"/>
+            <Setter Property="Height" Value="16"/>
             <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
+                        <Grid>
+                            <Ellipse x:Name="Circle" Fill="{TemplateBinding Background}"/>
+                            <TextBlock x:Name="Icon" 
+                                     Text="{TemplateBinding Content}" 
+                                     Foreground="#000000" 
+                                     FontSize="11" 
+                                     FontWeight="Bold"
+                                     HorizontalAlignment="Center" 
+                                     VerticalAlignment="Center"
+                                     Opacity="0"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Icon" Property="Opacity" Value="1"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#22FFFFFF"/>
-                </Trigger>
-            </Style.Triggers>
         </Style>
 
         <Style x:Key="PillButton" TargetType="Button">
@@ -185,7 +195,7 @@
                     <Button Content="Dashboard" Style="{StaticResource SidebarButton}"/>
                     <Button Content="Restore Points"
                             Style="{StaticResource SidebarButton}"
-                            Click="OpenRestorePoints_Click"/>   
+                            Click="OpenRestorePoints_Click"/>
                     <Button Content="Settings" 
                             Style="{StaticResource SidebarButton}"
                             Click="SettingsButton_Click"/>
@@ -243,14 +253,30 @@
                     </Border>
                 </StackPanel>
 
+                <!-- macOS Style Window Controls -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <Button x:Name="ThemeToggleBtn" Width="40" Height="40" Click="ThemeToggle_Click" Style="{StaticResource ThemeToggleButton}" Margin="0,0,10,0">
+                    <Button x:Name="ThemeToggleBtn" Width="40" Height="40" Click="ThemeToggle_Click" Style="{StaticResource ThemeToggleButton}" Margin="0,0,20,0">
                         <TextBlock x:Name="ThemeIcon" Text="🌙" FontSize="20"
                                    Foreground="{DynamicResource FontPrimary}"/>
                     </Button>
-                    <Button Width="30" Height="30" Content="—" Click="Minimize_Click" Style="{StaticResource ChromeButton}"/>
-                    <Button Width="30" Height="30" Content="▢" Click="MaxRestore_Click" Style="{StaticResource ChromeButton}" Margin="6,0"/>
-                    <Button Width="30" Height="30" Content="×" Click="Close_Click" Style="{StaticResource ChromeButton}"/>
+
+                    <!-- macOS Window Controls -->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <Button Click="Minimize_Click" 
+                                Style="{StaticResource MacOSButton}" 
+                                Background="#FFBD2E"
+                                Content="−"
+                                Margin="0,0,8,0"/>
+                        <Button Click="MaxRestore_Click" 
+                                Style="{StaticResource MacOSButton}" 
+                                Background="#27C93F"
+                                Content="⤢"
+                                Margin="0,0,8,0"/>
+                        <Button Click="Close_Click" 
+                                Style="{StaticResource MacOSButton}" 
+                                Background="#FF5F56"
+                                Content="×"/>
+                    </StackPanel>
                 </StackPanel>
             </Grid>
 
