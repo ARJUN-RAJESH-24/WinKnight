@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WinKnightUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8e81941189817dcec17f4ad20c6caaf02c1d0be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5da167f9a0c7a5d0aef0ab257a953eb9f8265411")]
 [assembly: System.Reflection.AssemblyProductAttribute("WinKnightUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WinKnightUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
