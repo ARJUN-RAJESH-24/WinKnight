@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "pC0nYPhUWJg=",
+  "dgSpecHash": "TAnrx9DfosM=",
   "success": true,
-  "projectFilePath": "D:\\Notes and Projects\\Project\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj",
+  "projectFilePath": "C:\\Projects\\WinKnight\\WinKnightUnified\\SelfHeal\\SelfHeal.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
-    "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\system.diagnostics.eventlog\\4.7.0\\system.diagnostics.eventlog.4.7.0.nupkg.sha512",
-    "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\ARJUN RAJESH\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22000.56\\microsoft.windows.sdk.net.ref.10.0.22000.56.nupkg.sha512"
+    "C:\\Users\\yadhu\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\yadhu\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\yadhu\\.nuget\\packages\\system.diagnostics.eventlog\\4.7.0\\system.diagnostics.eventlog.4.7.0.nupkg.sha512",
+    "C:\\Users\\yadhu\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\yadhu\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\yadhu\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22000.57\\microsoft.windows.sdk.net.ref.10.0.22000.57.nupkg.sha512"
   ],
   "logs": []
 }

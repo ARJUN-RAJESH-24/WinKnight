@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Release\net8.0-windows\
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Release\net8.0-windows\
 WinKnightUI
 none
 false
-TRACE;RELEASE;NET;NET8_0;NETCOREAPP
-D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\App.xaml
-61045942238
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\App.xaml
+71579691226
 
-121445566212
-202-2141151272
-DiskMonitorPopup.xaml;HighRamUsageWarning.xaml;MainWindow.xaml;RamUsagePopup.xaml;StartupManagerPopup.xaml;TempGraphPopup.xaml;
+14953717030
+2021450314665
+DiskMonitorPopup.xaml;HighRamUsageWarning.xaml;MainWindow.xaml;RamUsagePopup.xaml;StartupManagerPopup.xaml;TempGraphPopup.xaml;Window1.xaml;
 
-False
+True
 
