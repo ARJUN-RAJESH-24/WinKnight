@@ -59,7 +59,7 @@ namespace WinKnightUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WinKnightUI;component/diskmonitorpopup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WinKnightUI;V1.0.0.0;component/diskmonitorpopup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\DiskMonitorPopup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -59,3 +59,4 @@ D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\n
 D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.pdb
 D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.genruntimeconfig.cache
 D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\ref\WinKnightUI.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\Assets\favicon.ico

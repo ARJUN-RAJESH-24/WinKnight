@@ -139,7 +139,7 @@ namespace WinKnightUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WinKnightUI;component/settingspopup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WinKnightUI;V1.0.0.0;component/settingspopup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SettingsPopup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

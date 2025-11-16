@@ -8,5 +8,6 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/startup.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/favicon.ico")]
 
 
