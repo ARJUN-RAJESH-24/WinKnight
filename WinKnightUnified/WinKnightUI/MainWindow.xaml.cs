@@ -49,6 +49,12 @@ namespace WinKnightUI
             _metricsTimer.Tick += MetricsTimer_Tick;
             _metricsTimer.Start();
         }
+        private void OpenRestorePoints_Click(object sender, RoutedEventArgs e)
+        {
+            var win = new RestorePointWindow();
+            win.Owner = this;
+            win.ShowDialog();
+        }
 
         private async void MetricsTimer_Tick(object? sender, EventArgs e)
         {

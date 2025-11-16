@@ -17,5 +17,8 @@
     <Compile Update="TempGraphPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

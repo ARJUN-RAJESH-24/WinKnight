@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\WinKnight\\WinKnightUnified\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|c:\\projects\\winknight\\winknightunified\\winknightui\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|c:\\projects\\winknight\\winknightunified\\winknightui\\restorepointmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\restorepointmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|c:\\projects\\winknight\\winknightunified\\winknightui\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|c:\\projects\\winknight\\winknightunified\\winknightui\\services\\restoreguardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\services\\restoreguardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|c:\\projects\\winknight\\winknightunified\\winknightui\\services\\updatemonitorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\services\\updatemonitorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|c:\\projects\\winknight\\winknightunified\\winknightui\\restoretypetobrushconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\restoretypetobrushconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|c:\\projects\\winknight\\winknightunified\\winknightui\\winknightui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\winknightui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|c:\\projects\\winknight\\winknightunified\\winknightui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|c:\\projects\\winknight\\winknightunified\\winknightui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F89D0369-097B-4AB2-99EF-2AF4AC1C7936}|WinKnightUI\\WinKnightUI.csproj|solutionrelative:winknightui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 162,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateMonitorService.cs",
+              "DocumentMoniker": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\Services\\UpdateMonitorService.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\Services\\UpdateMonitorService.cs",
+              "ToolTip": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\Services\\UpdateMonitorService.cs",
+              "RelativeToolTip": "WinKnightUI\\Services\\UpdateMonitorService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T15:54:12.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RestoreTypeToBrushConverter.cs",
+              "DocumentMoniker": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\RestoreTypeToBrushConverter.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\RestoreTypeToBrushConverter.cs",
+              "ToolTip": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\RestoreTypeToBrushConverter.cs",
+              "RelativeToolTip": "WinKnightUI\\RestoreTypeToBrushConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T15:37:27.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RestorePointModel.cs",
+              "DocumentMoniker": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\RestorePointModel.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\RestorePointModel.cs",
+              "ToolTip": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\RestorePointModel.cs",
+              "RelativeToolTip": "WinKnightUI\\RestorePointModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T15:11:27.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WinKnightUI\\MainWindow.xaml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAmwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T14:17:02.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RestoreGuardManager.cs",
+              "DocumentMoniker": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\Services\\RestoreGuardManager.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\Services\\RestoreGuardManager.cs",
+              "ToolTip": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\Services\\RestoreGuardManager.cs",
+              "RelativeToolTip": "WinKnightUI\\Services\\RestoreGuardManager.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T14:00:14.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Window1.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\Window1.xaml.cs",
+              "RelativeDocumentMoniker": "WinKnightUI\\Window1.xaml.cs",
+              "ToolTip": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\Window1.xaml.cs",
+              "RelativeToolTip": "WinKnightUI\\Window1.xaml.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAA3wF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T13:57:28.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Window1.xaml",
+              "DocumentMoniker": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\Window1.xaml",
+              "RelativeDocumentMoniker": "WinKnightUI\\Window1.xaml",
+              "ToolTip": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\Window1.xaml",
+              "RelativeToolTip": "WinKnightUI\\Window1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-16T13:57:07.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WinKnightUI\\MainWindow.xaml",
+              "ToolTip": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\MainWindow.xaml",
+              "RelativeToolTip": "WinKnightUI\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-16T13:49:13.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WinKnightUI.csproj",
+              "DocumentMoniker": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\WinKnightUI.csproj",
+              "RelativeDocumentMoniker": "WinKnightUI\\WinKnightUI.csproj",
+              "ToolTip": "C:\\Projects\\WinKnight\\WinKnightUnified\\WinKnightUI\\WinKnightUI.csproj",
+              "RelativeToolTip": "WinKnightUI\\WinKnightUI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T13:48:51.383Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
