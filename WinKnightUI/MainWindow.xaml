@@ -1,0 +1,509 @@
+﻿<Window x:Class="WinKnightUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WinKnight - System Guardian"
+        Height="750" Width="1400"
+        MinHeight="650" MinWidth="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource BackgroundBrush}"
+        WindowStyle="None"
+        AllowsTransparency="True">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="BackgroundBrush" Color="#0B1A31"/>
+        <SolidColorBrush x:Key="SidebarBrush" Color="#0A1828"/>
+        <SolidColorBrush x:Key="CardBackgroundBrush" Color="#182A41"/>
+        <SolidColorBrush x:Key="SubCardBrush" Color="#1A2538"/>
+        <SolidColorBrush x:Key="HoverBrush" Color="#1A2B42"/>
+        <SolidColorBrush x:Key="PressedBrush" Color="#122030"/>
+        <SolidColorBrush x:Key="StatusBadgeBrush" Color="#1E3A5F"/>
+
+        <SolidColorBrush x:Key="AccentBlue" Color="#3498DB"/>
+        <SolidColorBrush x:Key="AccentLightBlue" Color="#5DADE2"/>
+        <SolidColorBrush x:Key="FontPrimary" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="FontSecondary" Color="#8796A6"/>
+        <SolidColorBrush x:Key="SuccessBrush" Color="#2ECC71"/>
+        <SolidColorBrush x:Key="WarningBrush" Color="#F1C40F"/>
+        <SolidColorBrush x:Key="ErrorBrush" Color="#E74C3C"/>
+
+        <Style x:Key="SidebarButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{DynamicResource FontSecondary}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="20,15"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" CornerRadius="8" Margin="0,4">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource HoverBrush}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource FontPrimary}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource PressedBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DashboardCard" TargetType="Border">
+            <Setter Property="Background" Value="{DynamicResource CardBackgroundBrush}"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="4" Opacity="0.2" Color="#000000"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ChromeButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{DynamicResource FontPrimary}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#22FFFFFF"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="PillButton" TargetType="Button">
+            <Setter Property="Background" Value="{DynamicResource AccentBlue}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="10" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource AccentLightBlue}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="MetricCardButton" TargetType="Button">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Style="{StaticResource DashboardCard}"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource HoverBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="StatusBadge" TargetType="Border">
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Background" Value="{DynamicResource StatusBadgeBrush}"/>
+        </Style>
+
+        <Style x:Key="ThemeToggleButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#33FFFFFF"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="{DynamicResource SidebarBrush}">
+            <Grid Margin="20,30,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <TextBlock Text="WIN KNIGHT"
+                               Foreground="{DynamicResource FontPrimary}"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,30"/>
+
+                    <Button Content="Dashboard" Style="{StaticResource SidebarButton}"/>
+                    <Button Content="Restore Points"
+                            Style="{StaticResource SidebarButton}"
+                            Click="OpenRestorePoints_Click"/>   
+                    <Button Content="Settings" 
+                            Style="{StaticResource SidebarButton}"
+                            Click="SettingsButton_Click"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2">
+                    <Button Content="🛡️ Windows Defender" 
+                            Style="{StaticResource SidebarButton}" 
+                            Click="WindowsDefender_Click"
+                            Margin="0"
+                            Padding="14"/>
+                    <Border Style="{StaticResource DashboardCard}" Margin="0,10,0,0" Padding="12">
+                        <StackPanel>
+                            <TextBlock Text="System Status" Foreground="{DynamicResource FontSecondary}" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,8"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,3">
+                                <Ellipse Width="8" Height="8" Fill="{DynamicResource SuccessBrush}" Margin="0,0,6,0"/>
+                                <TextBlock Text="Defender Active" Foreground="{DynamicResource FontPrimary}" FontSize="10"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,3">
+                                <Ellipse Width="8" Height="8" Fill="{DynamicResource SuccessBrush}" Margin="0,0,6,0"/>
+                                <TextBlock x:Name="UptimeStatusText" Text="Uptime: 0h 0m" Foreground="{DynamicResource FontPrimary}" FontSize="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1" Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="0,0,0,20">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="Dashboard"
+                               Foreground="{DynamicResource FontPrimary}"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               VerticalAlignment="Center"/>
+
+                    <Border Style="{StaticResource StatusBadge}" Margin="20,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="🛡️" FontSize="12" Margin="0,0,4,0"/>
+                            <TextBlock Text="Protected" Foreground="{DynamicResource SuccessBrush}" FontSize="11" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource StatusBadge}" Margin="8,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="📊" FontSize="12" Margin="0,0,4,0"/>
+                            <TextBlock x:Name="PerformanceStatusText" Text="Performance: Good" Foreground="{DynamicResource FontPrimary}" FontSize="11" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button x:Name="ThemeToggleBtn" Width="40" Height="40" Click="ThemeToggle_Click" Style="{StaticResource ThemeToggleButton}" Margin="0,0,10,0">
+                        <TextBlock x:Name="ThemeIcon" Text="🌙" FontSize="20"
+                                   Foreground="{DynamicResource FontPrimary}"/>
+                    </Button>
+                    <Button Width="30" Height="30" Content="—" Click="Minimize_Click" Style="{StaticResource ChromeButton}"/>
+                    <Button Width="30" Height="30" Content="▢" Click="MaxRestore_Click" Style="{StaticResource ChromeButton}" Margin="6,0"/>
+                    <Button Width="30" Height="30" Content="×" Click="Close_Click" Style="{StaticResource ChromeButton}"/>
+                </StackPanel>
+            </Grid>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.5*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0" Style="{StaticResource DashboardCard}" Margin="0,0,15,15" Height="240">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Ellipse Grid.Column="0" Width="90" Height="90" Margin="0,0,20,0">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="https://placehold.co/100x100/3498DB/FFFFFF?text=AVATAR"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                    <TextBlock Text="Welcome back," Foreground="{DynamicResource FontPrimary}" FontSize="20" FontWeight="SemiBold"/>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0" VerticalAlignment="Center">
+                                        <TextBlock x:Name="WelcomeNameText" Text="user name" Foreground="{DynamicResource FontPrimary}" FontSize="42" FontWeight="Bold" VerticalAlignment="Center"/>
+                                        <Image x:Name="WelcomeImage" Margin="15,0,0,0" Height="100" Width="100" Stretch="UniformToFill" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <TextBlock Text="Glad to see you again!" Foreground="{DynamicResource FontSecondary}" FontSize="16" Margin="0,8,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Column="1" Style="{StaticResource DashboardCard}" Margin="0,0,15,15">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                    <TextBlock Text="💥" FontSize="20" Margin="0,0,8,0"/>
+                                    <TextBlock Text="BSOD History" Foreground="{DynamicResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                </StackPanel>
+
+                                <Border Background="{DynamicResource SubCardBrush}" CornerRadius="8" Padding="12" Margin="0,0,0,8">
+                                    <StackPanel>
+                                        <TextBlock Text="Recent Crashes" Foreground="{DynamicResource FontSecondary}" FontSize="11" Margin="0,0,0,6"/>
+                                        <TextBlock x:Name="LastCrashText" Text="Last crash: 2 days ago" Foreground="{DynamicResource FontPrimary}" FontSize="12" Margin="0,0,0,4"/>
+                                        <TextBlock x:Name="StopCodeText" Text="KERNEL_DATA_INPAGE_ERROR" Foreground="{DynamicResource WarningBrush}" FontSize="11" FontFamily="Consolas" Margin="0,0,0,6"/>
+                                        <TextBlock x:Name="TotalCrashesText" Text="Total crashes: 3" Foreground="{DynamicResource FontSecondary}" FontSize="10"/>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Grid.Column="2" Style="{StaticResource DashboardCard}" Margin="0,0,0,15">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                                    <TextBlock Text="💾" FontSize="20" Margin="0,0,8,0"/>
+                                    <TextBlock Text="RestoreGuard" Foreground="{DynamicResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                </StackPanel>
+
+                                <TextBlock Text="Create a new system restore point" Foreground="{DynamicResource FontSecondary}" FontSize="12" Margin="0,0,0,12" TextWrapping="Wrap"/>
+
+                                <Button x:Name="CreateRestoreButton" Content="Create Restore Point" Style="{StaticResource PillButton}" Click="CreateRestore_Click" Margin="0,0,0,12"/>
+
+                                <Border Background="{DynamicResource SubCardBrush}" CornerRadius="8" Padding="10">
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                                            <TextBlock Text="Last backup:" Foreground="{DynamicResource FontSecondary}" FontSize="11"/>
+                                            <TextBlock x:Name="LastRestoreText" Text=" N/A" Foreground="{DynamicResource FontPrimary}" FontSize="11" FontWeight="SemiBold"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Restore points:" Foreground="{DynamicResource FontSecondary}" FontSize="11"/>
+                                            <TextBlock x:Name="RestorePointCountText" Text=" 3 available" Foreground="{DynamicResource SuccessBrush}" FontSize="11" FontWeight="SemiBold"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <Grid Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
+                            <Grid>
+                                <Button Style="{StaticResource MetricCardButton}" Click="CpuTemp_Click">
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,8">
+                                            <TextBlock Text="🌡️" Foreground="{DynamicResource FontPrimary}" FontSize="22" Margin="0,0,8,0"/>
+                                            <TextBlock Text="CPU Temp" Foreground="{DynamicResource FontPrimary}" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                        <TextBlock x:Name="CpuTempText" Text="--°C" Foreground="{DynamicResource FontPrimary}" FontSize="48" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                        <Border x:Name="TempZoneIndicator" Background="{DynamicResource SuccessBrush}" CornerRadius="10" Padding="8,4" Margin="0,8,0,0">
+                                            <TextBlock x:Name="TempZoneText" Text="Normal" Foreground="White" FontSize="11" FontWeight="SemiBold"/>
+                                        </Border>
+                                    </StackPanel>
+                                </Button>
+                                <Button x:Name="TempWarningButton" Click="TempWarning_Click" Cursor="Hand" Background="Transparent" BorderThickness="0" Padding="0"
+                                        HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" Margin="0,-10,-10,0">
+                                    <Border x:Name="TempWarningBox" Background="#E74C3C" CornerRadius="5" Padding="5">
+                                        <TextBlock Text="!" FontWeight="Bold" Foreground="White" FontSize="16"/>
+                                        <Border.Style>
+                                            <Style TargetType="Border">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Visibility, ElementName=TempWarningButton}" Value="Visible">
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Name="BlinkAnimationStoryboard">
+                                                                <Storyboard RepeatBehavior="Forever">
+                                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1.0" To="0.2" Duration="0:0:0.5" AutoReverse="True"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <StopStoryboard BeginStoryboardName="BlinkAnimationStoryboard"/>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                    </Border>
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Column="1" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
+                            <Grid>
+                                <Button Style="{StaticResource MetricCardButton}" Click="RamUsage_Click">
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,8">
+                                            <TextBlock Text="💾" Foreground="{DynamicResource FontPrimary}" FontSize="22" Margin="0,0,8,0"/>
+                                            <TextBlock Text="RAM Usage" Foreground="{DynamicResource FontPrimary}" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                        <TextBlock x:Name="RamUsageText" Text="--%" Foreground="{DynamicResource FontPrimary}" FontSize="48" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                        <TextBlock x:Name="RamDetailText" Text="-- GB / -- GB" Foreground="{DynamicResource FontSecondary}" FontSize="12" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button x:Name="RamWarningButton" Click="RamWarning_Click" Cursor="Hand" Background="Transparent" BorderThickness="0" Padding="0"
+                                        HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" Margin="0,-10,-10,0">
+                                    <Border x:Name="RamWarningBox" Background="#E74C3C" CornerRadius="5" Padding="5">
+                                        <TextBlock Text="!" FontWeight="Bold" Foreground="White" FontSize="16"/>
+                                        <Border.Style>
+                                            <Style TargetType="Border">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Visibility, ElementName=RamWarningButton}" Value="Visible">
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Name="BlinkAnimationStoryboard2">
+                                                                <Storyboard RepeatBehavior="Forever">
+                                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1.0" To="0.2" Duration="0:0:0.5" AutoReverse="True"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <StopStoryboard BeginStoryboardName="BlinkAnimationStoryboard2"/>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                    </Border>
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Column="2" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
+                            <Button Style="{StaticResource MetricCardButton}" Click="DiskHealth_Click">
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,8">
+                                        <TextBlock Text="💽" Foreground="{DynamicResource FontPrimary}" FontSize="22" Margin="0,0,8,0"/>
+                                        <TextBlock Text="Disk Health" Foreground="{DynamicResource FontPrimary}" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="DiskHealthText" Text="Good" Foreground="{DynamicResource FontPrimary}" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Text, ElementName=DiskHealthText}" Value="Low Disk Space">
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Name="BlinkAnimationStoryboard3">
+                                                                <Storyboard RepeatBehavior="Forever">
+                                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1.0" To="0.2" Duration="0:0:0.5" AutoReverse="True"/>
+                                                                </Storyboard>
+                                                            </BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <StopStoryboard BeginStoryboardName="BlinkAnimationStoryboard3"/>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock x:Name="DiskSpaceText" Text="512 GB / 1 TB free" Foreground="{DynamicResource FontSecondary}" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+
+                        <Border Grid.Column="3" Style="{StaticResource DashboardCard}">
+                            <Button Style="{StaticResource MetricCardButton}" Click="StartupManager_Click">
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,8">
+                                        <TextBlock Text="🚀" Foreground="{DynamicResource FontPrimary}" FontSize="22" Margin="0,0,8,0"/>
+                                        <TextBlock Text="Startup Apps" Foreground="{DynamicResource FontPrimary}" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="StartupProgramsText" Text="--" Foreground="{DynamicResource FontPrimary}" FontSize="48" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                    <TextBlock x:Name="StartupImpactText" Text="2 High Impact" Foreground="{DynamicResource WarningBrush}" FontSize="11" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                    </Grid>
+
+                    <Grid Margin="0,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                                    <TextBlock Text="🔍" FontSize="20" Margin="0,0,8,0"/>
+                                    <TextBlock Text="System Scan" Foreground="{DynamicResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                </StackPanel>
+
+                                <TextBlock Text="Run diagnostics to check for issues" Foreground="{DynamicResource FontSecondary}" FontSize="12" Margin="0,0,0,12"/>
+
+                                <Button x:Name="RunScanButton" Content="Run Full System Scan" Style="{StaticResource PillButton}" Click="RunScan_Click" Margin="0,0,0,10"/>
+
+                                <ProgressBar x:Name="ScanProgressBar" Height="8" Margin="0,0,0,10" IsIndeterminate="False" Background="{DynamicResource SubCardBrush}" Foreground="{DynamicResource AccentBlue}"/>
+
+                                <TextBlock x:Name="ScanStatusText" Text="" Foreground="{DynamicResource FontSecondary}" FontSize="11" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border x:Name="ActivityLogCard" Grid.Column="1" Style="{StaticResource DashboardCard}" MouseLeftButtonDown="ActivityLogCard_MouseLeftButtonDown" Cursor="Hand">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                                    <TextBlock Text="📋" FontSize="20" Margin="0,0,8,0"/>
+                                    <TextBlock Text="Activity Log" Foreground="{DynamicResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                </StackPanel>
+
+                                <TextBlock x:Name="CurrentStatusText" Text="Idle..." Foreground="{DynamicResource FontSecondary}" FontSize="12" Margin="0,0,0,10"/>
+
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" Height="120">
+                                    <TextBlock x:Name="ReportLogText" Text="Scan reports will appear here..." Foreground="{DynamicResource FontPrimary}" TextWrapping="Wrap" FontSize="12" LineHeight="18"/>
+                                </ScrollViewer>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

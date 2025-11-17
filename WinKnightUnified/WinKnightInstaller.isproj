@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">SingleImage</Platform>
+    <ProductVersion>2023</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22749c10-fb8d-4b04-8e11-7ff7f528ef80}</ProjectGuid>
+    <OutputName>WinKnightSuite</OutputName>
+    <OutputType>Package</OutputType>
+    <UseSetupExeBootstrapper>true</UseSetupExeBootstrapper>
+    <CompanyName>YourCompany</CompanyName>
+    <ProductName>WinKnight Suite</ProductName>
+    <ProductVersion>1.0.0</ProductVersion>
+    <DestinationFolder>[ProgramFilesFolder]YourCompany\WinKnight Suite</DestinationFolder>
+  </PropertyGroup>
+  <!-- Primary outputs (filled later) -->
+  <ItemGroup />
+  <!-- Shortcuts (filled later) -->
+  <ItemGroup />
+  <!-- Prerequisites (filled later) -->
+  <ItemGroup />
+  <ApplicationFile Output="WinKnightUI|Primary output|Release|x64" />
+  <ApplicationFile Output="CacheCleaner|Primary output|Release|x64" />
+  <ApplicationFile Output="WindowsUpdateManager|Primary output|Release|x64" />
+  <ApplicationFile Output="SelfHeal|Primary output|Release|x64" />
+  <ApplicationFile Output="RestoreGuard|Primary output|Release|AnyCPU" />
+  <Shortcut Name="WinKnight" Target="[#WinKnightUI.exe]" WorkingDirectory="[INSTALLDIR]" Locations="DesktopFolder,ProgramMenuFolder" />
+  <Prerequisite Name=".NET Desktop Runtime 8.0 (x64)" InstallCondition="NOT DOTNET8DESKTOPRUNTIME" />
+</Project>

@@ -1,0 +1,196 @@
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.exe
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.deps.json
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.runtimeconfig.json
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.dll
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.pdb
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\bin\Debug\net8.0-windows\System.CodeDom.dll
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.csproj.AssemblyReference.cache
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\DiskMonitorPopup.baml
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\HighRamUsageWarning.baml
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\RamUsagePopup.baml
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\TempGraphPopup.baml
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\DiskMonitorPopup.g.cs
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\HighRamUsageWarning.g.cs
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\RamUsagePopup.g.cs
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\StartupManagerPopup.g.cs
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\TempGraphPopup.g.cs
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI_MarkupCompile.cache
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI_MarkupCompile.lref
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\StartupManagerPopup.baml
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.g.resources
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.AssemblyInfoInputs.cache
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.AssemblyInfo.cs
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.csproj.CoreCompileInputs.cache
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnigh.1D4CEC02.Up2Date
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.dll
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\refint\WinKnightUI.dll
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.pdb
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.genruntimeconfig.cache
+C:\Users\Ajith Ashok\source\repos\WinKnightUI\WinKnightUI\obj\Debug\net8.0-windows\ref\WinKnightUI.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.deps.json
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.runtimeconfig.json
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.exe
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.deps.json
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.runtimeconfig.json
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.exe
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.exe
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.deps.json
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.runtimeconfig.json
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.pdb
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\System.CodeDom.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\System.Management.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\System.ServiceProcess.ServiceController.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.pdb
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.pdb
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.csproj.AssemblyReference.cache
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\DiskMonitorPopup.baml
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\HighRamUsageWarning.baml
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\RamUsagePopup.baml
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\TempGraphPopup.baml
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\DiskMonitorPopup.g.cs
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\HighRamUsageWarning.g.cs
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\RamUsagePopup.g.cs
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\StartupManagerPopup.g.cs
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\TempGraphPopup.g.cs
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\App.g.cs
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI_MarkupCompile.cache
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI_MarkupCompile.lref
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\StartupManagerPopup.baml
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.g.resources
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.AssemblyInfoInputs.cache
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.AssemblyInfo.cs
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.csproj.CoreCompileInputs.cache
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnigh.1D4CEC02.Up2Date
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\refint\WinKnightUI.dll
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.pdb
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.genruntimeconfig.cache
+D:\Notes and Projects\Project\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\ref\WinKnightUI.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\refint\WinKnightUI.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.pdb
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.deps.json
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.runtimeconfig.json
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.exe
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.deps.json
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.runtimeconfig.json
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.exe
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.exe
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.deps.json
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.runtimeconfig.json
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.pdb
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\System.CodeDom.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\System.Management.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\System.ServiceProcess.ServiceController.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.pdb
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.pdb
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.csproj.AssemblyReference.cache
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\DiskMonitorPopup.baml
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\HighRamUsageWarning.baml
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\RamUsagePopup.baml
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\TempGraphPopup.baml
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\DiskMonitorPopup.g.cs
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\HighRamUsageWarning.g.cs
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\RamUsagePopup.g.cs
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\StartupManagerPopup.g.cs
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\TempGraphPopup.g.cs
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\App.g.cs
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI_MarkupCompile.cache
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI_MarkupCompile.lref
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\StartupManagerPopup.baml
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.g.resources
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.AssemblyInfoInputs.cache
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.AssemblyInfo.cs
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.csproj.CoreCompileInputs.cache
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.sourcelink.json
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnigh.1D4CEC02.Up2Date
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.genruntimeconfig.cache
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\ref\WinKnightUI.dll
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\Window1.baml
+C:\Projects\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\Window1.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.deps.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.runtimeconfig.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.exe
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.deps.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.runtimeconfig.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.exe
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\Assets\startup.wav
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.exe
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.deps.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.runtimeconfig.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.pdb
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\System.CodeDom.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\System.Management.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\System.ServiceProcess.ServiceController.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\CacheCleaner.pdb
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WindowsUpdateManager.pdb
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.csproj.AssemblyReference.cache
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\ActivityLogWindow.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\BSODAnalysisWindow.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\DiskMonitorPopup.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\HighRamUsageWarning.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\RamUsagePopup.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\SettingsPopup.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\StartupSplashScreen.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\TempGraphPopup.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\ActivityLogWindow.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\BSODAnalysisWindow.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\DiskMonitorPopup.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\HighRamUsageWarning.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\RamUsagePopup.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\SettingsPopup.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\StartupManagerPopup.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\StartupSplashScreen.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\TempGraphPopup.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\Window1.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\App.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI_Content.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI_MarkupCompile.cache
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI_MarkupCompile.lref
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\StartupManagerPopup.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\Window1.baml
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.g.resources
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.AssemblyInfoInputs.cache
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.AssemblyInfo.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.csproj.CoreCompileInputs.cache
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.sourcelink.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnigh.1D4CEC02.Up2Date
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\refint\WinKnightUI.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.pdb
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\WinKnightUI.genruntimeconfig.cache
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Debug\net8.0-windows\ref\WinKnightUI.dll
