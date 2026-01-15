@@ -139,7 +139,7 @@ namespace WinKnightUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WinKnightUI;V1.0.0.0;component/ramusagepopup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WinKnightUI;V2.0.0.0;component/ramusagepopup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\RamUsagePopup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

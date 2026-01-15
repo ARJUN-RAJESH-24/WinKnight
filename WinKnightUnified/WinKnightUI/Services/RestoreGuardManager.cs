@@ -40,7 +40,7 @@ namespace WinKnightUI.Services
                     Description = description,
                     EventType = Convert.ToInt32(rp["EventType"]),
                     RestorePointType = Convert.ToInt32(rp["RestorePointType"]),
-                    CreationTime = ConvertTimestamp(rp["CreationTime"]?.ToString()),
+                    CreationTime = ConvertTimestamp(rp["CreationTime"]?.ToString() ?? string.Empty),
                     SourceType = sourceType
                 });
             }

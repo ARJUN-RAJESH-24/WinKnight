@@ -3,6 +3,7 @@ using System.Windows;
 using System.IO;
 using Microsoft.Win32;
 using System.Diagnostics;
+using WinKnightUI.Services;
 
 namespace WinKnightUI
 {
@@ -18,7 +19,51 @@ namespace WinKnightUI
             InitializeComponent();
             _core = core;
             LoadSettings();
+            HighlightCurrentTheme();
             DataContext = this;
+        }
+
+        private void HighlightCurrentTheme()
+        {
+            var currentTheme = ThemeManager.Instance.CurrentTheme.ToString();
+            // Reset all button borders
+            DarkThemeBtn.BorderThickness = new Thickness(1);
+            LightThemeBtn.BorderThickness = new Thickness(1);
+            OceanThemeBtn.BorderThickness = new Thickness(1);
+            ForestThemeBtn.BorderThickness = new Thickness(1);
+            SunsetThemeBtn.BorderThickness = new Thickness(1);
+            NordThemeBtn.BorderThickness = new Thickness(1);
+
+            // Highlight the active theme
+            var activeButton = currentTheme switch
+            {
+                "Dark" => DarkThemeBtn,
+                "Light" => LightThemeBtn,
+                "Ocean" => OceanThemeBtn,
+                "Forest" => ForestThemeBtn,
+                "Sunset" => SunsetThemeBtn,
+                "Nord" => NordThemeBtn,
+                _ => DarkThemeBtn
+            };
+            activeButton.BorderThickness = new Thickness(2);
+        }
+
+        private void ThemePreset_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is System.Windows.Controls.Button button && button.Tag is string themeName)
+            {
+                var preset = ThemeManager.GetPresetByName(themeName);
+                if (preset.HasValue)
+                {
+                    // Apply to main window
+                    if (Owner?.Resources != null)
+                    {
+                        ThemeManager.Instance.ApplyTheme(preset.Value, Owner.Resources);
+                    }
+                    HighlightCurrentTheme();
+                    ActivityLogger.Log($"Theme changed to {themeName}");
+                }
+            }
         }
 
         private void LoadSettings()
@@ -50,7 +95,7 @@ namespace WinKnightUI
             try
             {
                 var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-                return $"{version.Major}.{version.Minor}.{version.Build}";
+                return version != null ? $"{version.Major}.{version.Minor}.{version.Build}" : "1.0.0";
             }
             catch
             {
@@ -190,7 +235,7 @@ namespace WinKnightUI
                 using (var key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true))
                 {
                     string appPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                    key.SetValue("WinKnight", $"\"{appPath}\"");
+                    key?.SetValue("WinKnight", $"\"{appPath}\"");
                 }
             }
             catch (Exception ex)
@@ -205,10 +250,10 @@ namespace WinKnightUI
             {
                 using (var key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true))
                 {
-                    key.DeleteValue("WinKnight", false);
+                    key?.DeleteValue("WinKnight", false);
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 // Ignore if key doesn't exist
             }

@@ -15,7 +15,7 @@ namespace WinKnightUI
         {
             if (value == null) return DefaultBrush;
 
-            string sourceType = value.ToString().ToLower();
+            string sourceType = value.ToString()?.ToLower() ?? string.Empty;
 
             return sourceType switch
             {

@@ -8,8 +8,8 @@ namespace WinKnightUI
 {
     public partial class App : Application
     {
-        private StartupSplashScreen _splashScreen;
-        private SoundPlayer _soundPlayer;
+        private StartupSplashScreen? _splashScreen;
+        private SoundPlayer? _soundPlayer;
 
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -65,7 +65,7 @@ namespace WinKnightUI
             var mainWindow = new MainWindow();
             mainWindow.Loaded += (s, e) =>
             {
-                _splashScreen.Close();
+                _splashScreen?.Close();
                 _soundPlayer?.Stop();
                 _soundPlayer?.Dispose();
             };

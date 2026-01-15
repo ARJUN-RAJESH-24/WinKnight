@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace WinKnightUI
 {
@@ -12,14 +13,13 @@ namespace WinKnightUI
 
         public static void Log(string message)
         {
-            string folder = Path.GetDirectoryName(LogFilePath);
-            if (!Directory.Exists(folder))
+            string? folder = Path.GetDirectoryName(LogFilePath);
+            if (folder != null && !Directory.Exists(folder))
                 Directory.CreateDirectory(folder);
 
             File.AppendAllText(LogFilePath, $"{DateTime.Now}: {message}\n");
         }
 
-        // ✔ FIXED: Now accepts ONLY 1 parameter (count)
         public static List<string> ReadLastEntries(int count)
         {
             if (!File.Exists(LogFilePath))

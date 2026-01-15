@@ -1,0 +1,20 @@
+﻿WinKnightUI
+2.0.0.0
+
+winexe
+C#
+.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\obj\Release\net8.0-windows\win-x64\
+WinKnightUI
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\App.xaml
+11-1063302616
+2-1188088415
+261548926135
+2061547549301
+ActivityLogWindow.xaml;BSODAnalysisWindow.xaml;DiskMonitorPopup.xaml;HighRamUsageWarning.xaml;MainWindow.xaml;RamUsagePopup.xaml;SettingsPopup.xaml;StartupManagerPopup.xaml;StartupSplashScreen.xaml;TempGraphPopup.xaml;Window1.xaml;
+
+False
+

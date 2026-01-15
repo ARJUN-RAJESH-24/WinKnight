@@ -147,7 +147,7 @@ namespace WinKnightUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WinKnightUI;V1.0.0.0;component/tempgraphpopup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WinKnightUI;V2.0.0.0;component/tempgraphpopup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\TempGraphPopup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

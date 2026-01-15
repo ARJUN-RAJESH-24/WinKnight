@@ -529,6 +529,128 @@
                             </StackPanel>
                         </Border>
                     </Grid>
+
+                    <!-- Network Monitoring & Quick Actions Row -->
+                    <Grid Margin="0,15,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Network Monitoring Card -->
+                        <Border Grid.Column="0" Style="{StaticResource DashboardCard}" Margin="0,0,15,0">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                    <TextBlock Text="🌐" FontSize="20" Margin="0,0,8,0"/>
+                                    <TextBlock Text="Network Monitor" Foreground="{DynamicResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                    <Border x:Name="NetworkStatusBadge" Background="{DynamicResource SuccessBrush}" CornerRadius="8" Padding="8,3" Margin="12,0,0,0" VerticalAlignment="Center">
+                                        <TextBlock x:Name="NetworkStatusText" Text="Connected" Foreground="White" FontSize="10" FontWeight="SemiBold"/>
+                                    </Border>
+                                </StackPanel>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Download Speed -->
+                                    <Border Grid.Column="0" Background="{DynamicResource SubCardBrush}" CornerRadius="10" Padding="15" Margin="0,0,8,0">
+                                        <StackPanel HorizontalAlignment="Center">
+                                            <TextBlock Text="⬇️ Download" Foreground="{DynamicResource FontSecondary}" FontSize="12" HorizontalAlignment="Center"/>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,8,0,0">
+                                                <TextBlock x:Name="DownloadSpeedText" Text="0.0" Foreground="{DynamicResource SuccessBrush}" FontSize="28" FontWeight="Bold"/>
+                                                <TextBlock Text=" Mbps" Foreground="{DynamicResource FontSecondary}" FontSize="12" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
+
+                                    <!-- Upload Speed -->
+                                    <Border Grid.Column="1" Background="{DynamicResource SubCardBrush}" CornerRadius="10" Padding="15" Margin="8,0,0,0">
+                                        <StackPanel HorizontalAlignment="Center">
+                                            <TextBlock Text="⬆️ Upload" Foreground="{DynamicResource FontSecondary}" FontSize="12" HorizontalAlignment="Center"/>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,8,0,0">
+                                                <TextBlock x:Name="UploadSpeedText" Text="0.0" Foreground="{DynamicResource AccentBlue}" FontSize="28" FontWeight="Bold"/>
+                                                <TextBlock Text=" Mbps" Foreground="{DynamicResource FontSecondary}" FontSize="12" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+
+                                <Border Background="{DynamicResource SubCardBrush}" CornerRadius="8" Padding="12" Margin="0,12,0,0">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="Interface" Foreground="{DynamicResource FontSecondary}" FontSize="10"/>
+                                            <TextBlock x:Name="NetworkInterfaceText" Text="Ethernet" Foreground="{DynamicResource FontPrimary}" FontSize="12" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="IP Address" Foreground="{DynamicResource FontSecondary}" FontSize="10"/>
+                                            <TextBlock x:Name="IpAddressText" Text="192.168.1.1" Foreground="{DynamicResource FontPrimary}" FontSize="12" FontWeight="SemiBold"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Quick Actions Card -->
+                        <Border Grid.Column="1" Style="{StaticResource DashboardCard}">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                    <TextBlock Text="⚡" FontSize="20" Margin="0,0,8,0"/>
+                                    <TextBlock Text="Quick Actions" Foreground="{DynamicResource FontPrimary}" FontSize="18" FontWeight="SemiBold"/>
+                                </StackPanel>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Button Grid.Row="0" Grid.Column="0" x:Name="FlushDnsBtn" Click="FlushDns_Click" 
+                                            Style="{StaticResource PillButton}" Margin="0,0,8,8" Padding="12,10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="🔄" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Flush DNS"/>
+                                        </StackPanel>
+                                    </Button>
+
+                                    <Button Grid.Row="0" Grid.Column="1" x:Name="ResetNetworkBtn" Click="ResetNetwork_Click"
+                                            Style="{StaticResource PillButton}" Margin="8,0,0,8" Padding="12,10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="🔌" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Reset Network"/>
+                                        </StackPanel>
+                                    </Button>
+
+                                    <Button Grid.Row="1" Grid.Column="0" x:Name="ClearTempBtn" Click="ClearTemp_Click"
+                                            Style="{StaticResource PillButton}" Margin="0,0,8,0" Padding="12,10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="🗑️" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Clear Temp"/>
+                                        </StackPanel>
+                                    </Button>
+
+                                    <Button Grid.Row="1" Grid.Column="1" x:Name="OpenDefenderBtn" Click="OpenDefender_Click"
+                                            Style="{StaticResource PillButton}" Margin="8,0,0,0" Padding="12,10">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="🛡️" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Defender"/>
+                                        </StackPanel>
+                                    </Button>
+                                </Grid>
+
+                                <TextBlock x:Name="QuickActionStatus" Text="" Foreground="{DynamicResource FontSecondary}" FontSize="11" Margin="0,12,0,0" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
                 </StackPanel>
             </ScrollViewer>
         </Grid>

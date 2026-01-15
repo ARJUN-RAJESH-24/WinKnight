@@ -1,5 +1,5 @@
 ﻿WinKnightUI
-1.0.0.0
+2.0.0.0
 
 winexe
 C#
@@ -12,8 +12,8 @@ TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\App.xaml
 11-1063302616
 2-1188088415
-221980795254
-202-2098644888
+26-690685505
+206-156259392
 ActivityLogWindow.xaml;BSODAnalysisWindow.xaml;DiskMonitorPopup.xaml;HighRamUsageWarning.xaml;MainWindow.xaml;RamUsagePopup.xaml;SettingsPopup.xaml;StartupManagerPopup.xaml;StartupSplashScreen.xaml;TempGraphPopup.xaml;Window1.xaml;
 
 False

@@ -1,0 +1,15 @@
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\bin\Release\net8.0-windows\win-x64\CacheCleaner.exe
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\bin\Release\net8.0-windows\win-x64\CacheCleaner.deps.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\bin\Release\net8.0-windows\win-x64\CacheCleaner.runtimeconfig.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\bin\Release\net8.0-windows\win-x64\CacheCleaner.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\bin\Release\net8.0-windows\win-x64\CacheCleaner.pdb
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\CacheCleaner.GeneratedMSBuildEditorConfig.editorconfig
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\CacheCleaner.AssemblyInfoInputs.cache
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\CacheCleaner.AssemblyInfo.cs
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\CacheCleaner.csproj.CoreCompileInputs.cache
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\CacheCleaner.sourcelink.json
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\CacheCleaner.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\refint\CacheCleaner.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\CacheCleaner.pdb
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\CacheCleaner.genruntimeconfig.cache
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\obj\Release\net8.0-windows\win-x64\ref\CacheCleaner.dll

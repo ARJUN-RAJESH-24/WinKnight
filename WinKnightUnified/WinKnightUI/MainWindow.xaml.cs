@@ -9,17 +9,20 @@ using System.Linq;
 using System.Windows.Media;
 using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
+using WinKnightUI.Services;
 
 namespace WinKnightUI
 {
     public partial class MainWindow : Window
     {
         private WinKnightCore _winKnightCore;
+        private NetworkMonitorService _networkMonitor;
         private DispatcherTimer? _metricsTimer;
         private DispatcherTimer? _uptimeTimer;
         private bool _isTempWarningActive = false;
         private bool _isRamWarningActive = false;
-        private bool _isDarkMode = true;
+        private int _currentThemeIndex = 0;
+        private readonly ThemePreset[] _themePresets = (ThemePreset[])Enum.GetValues(typeof(ThemePreset));
 
         private double _warningTempAtTime = 0.0;
         private int _warningRamAtTime = 0;
@@ -34,6 +37,7 @@ namespace WinKnightUI
         {
             InitializeComponent();
             _winKnightCore = new WinKnightCore();
+            _networkMonitor = new NetworkMonitorService();
             _systemStartTime = DateTime.Now - TimeSpan.FromMilliseconds(Environment.TickCount64);
 
             this.MouseLeftButtonDown += (sender, e) => {
@@ -51,92 +55,48 @@ namespace WinKnightUI
             string userName = Environment.UserName;
             WelcomeNameText.Text = userName;
 
-            // Initialize with dark theme
-            ApplyDarkTheme();
+            // Load saved theme from ThemeManager
+            InitializeTheme();
 
             LoadBSODHistory();
             StartMetricsTimer();
             StartUptimeTimer();
         }
 
+        private void InitializeTheme()
+        {
+            var currentTheme = ThemeManager.Instance.CurrentTheme;
+            _currentThemeIndex = Array.IndexOf(_themePresets, currentTheme);
+            if (_currentThemeIndex < 0) _currentThemeIndex = 0;
+            
+            ThemeManager.Instance.ApplyTheme(currentTheme, Resources);
+            UpdateThemeIcon(currentTheme);
+        }
+
         #region Theme Management
         private void ThemeToggle_Click(object sender, RoutedEventArgs e)
         {
-            _isDarkMode = !_isDarkMode;
+            // Cycle through all theme presets
+            _currentThemeIndex = (_currentThemeIndex + 1) % _themePresets.Length;
+            var newTheme = _themePresets[_currentThemeIndex];
+            
+            ThemeManager.Instance.ApplyTheme(newTheme, Resources);
+            UpdateThemeIcon(newTheme);
+            ActivityLogger.Log($"Theme switched to {newTheme}");
+        }
 
-            if (_isDarkMode)
+        private void UpdateThemeIcon(ThemePreset theme)
+        {
+            ThemeIcon.Text = theme switch
             {
-                ApplyDarkTheme();
-                ThemeIcon.Text = "🌙";
-                ActivityLogger.Log("Theme switched to Dark Mode");
-            }
-            else
-            {
-                ApplyLightTheme();
-                ThemeIcon.Text = "☀️";
-                ActivityLogger.Log("Theme switched to Light Mode");
-            }
-        }
-
-        private void ApplyDarkTheme()
-        {
-            // Main backgrounds
-            UpdateBrush("BackgroundBrush", "#0B1A31");
-            UpdateBrush("SidebarBrush", "#0A1828");
-            UpdateBrush("CardBackgroundBrush", "#182A41");
-            UpdateBrush("SubCardBrush", "#1A2538");
-            UpdateBrush("StatusBadgeBrush", "#1E3A5F");
-
-            // Hover and interaction states
-            UpdateBrush("HoverBrush", "#1A2B42");
-            UpdateBrush("PressedBrush", "#122030");
-
-            // Fonts
-            UpdateBrush("FontPrimary", "#FFFFFF");
-            UpdateBrush("FontSecondary", "#8796A6");
-
-            // Accent colors
-            UpdateBrush("AccentBlue", "#3498DB");
-            UpdateBrush("AccentLightBlue", "#5DADE2");
-
-            // Status colors
-            UpdateBrush("SuccessBrush", "#2ECC71");
-            UpdateBrush("WarningBrush", "#F1C40F");
-            UpdateBrush("ErrorBrush", "#E74C3C");
-        }
-
-        private void ApplyLightTheme()
-        {
-            // Main backgrounds - Light mode colors
-            UpdateBrush("BackgroundBrush", "#F5F7FA");
-            UpdateBrush("SidebarBrush", "#FFFFFF");
-            UpdateBrush("CardBackgroundBrush", "#FFFFFF");
-            UpdateBrush("SubCardBrush", "#F0F3F7");
-            UpdateBrush("StatusBadgeBrush", "#E8EDF2");
-
-            // Hover and interaction states
-            UpdateBrush("HoverBrush", "#E8EDF2");
-            UpdateBrush("PressedBrush", "#D6DDE5");
-
-            // Fonts - Dark text for light mode
-            UpdateBrush("FontPrimary", "#1A2332");
-            UpdateBrush("FontSecondary", "#5E6C7F");
-
-            // Accent colors - Slightly adjusted for better visibility
-            UpdateBrush("AccentBlue", "#2980B9");
-            UpdateBrush("AccentLightBlue", "#3498DB");
-
-            // Status colors - Adjusted for light mode
-            UpdateBrush("SuccessBrush", "#27AE60");
-            UpdateBrush("WarningBrush", "#F39C12");
-            UpdateBrush("ErrorBrush", "#C0392B");
-        }
-
-        private void UpdateBrush(string resourceKey, string hexColor)
-        {
-            // Create a new SolidColorBrush instead of modifying the frozen one
-            var newBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(hexColor));
-            Resources[resourceKey] = newBrush;
+                ThemePreset.Dark => "🌙",
+                ThemePreset.Light => "☀️",
+                ThemePreset.Ocean => "🌊",
+                ThemePreset.Forest => "🌲",
+                ThemePreset.Sunset => "🌅",
+                ThemePreset.Nord => "❄️",
+                _ => "🎨"
+            };
         }
         #endregion
 
@@ -343,8 +303,8 @@ namespace WinKnightUI
             var ramUsage = await _winKnightCore.GetRamUsage();
             RamUsageText.Text = $"{ramUsage}%";
 
-            var totalRam = 16.0;
-            var usedRam = (ramUsage / 100.0) * totalRam;
+            var totalRam = _winKnightCore.GetTotalRamGb();
+            var usedRam = await _winKnightCore.GetUsedRamGbAsync();
             RamDetailText.Text = $"{usedRam:F1} GB / {totalRam:F1} GB";
 
             if (ramUsage > 85 && !_isRamWarningActive)
@@ -357,15 +317,46 @@ namespace WinKnightUI
             // Disk Health
             var diskStatus = await _winKnightCore.GetDiskHealthStatus();
             DiskHealthText.Text = diskStatus.Status;
-            DiskSpaceText.Text = "512 GB / 1 TB free";
+            DiskSpaceText.Text = $"{diskStatus.FreeSpaceGb} GB / {diskStatus.TotalSpaceGb} GB free";
 
             // Startup Programs
-            var startupCount = await _winKnightCore.GetStartupProgramsCount();
-            StartupProgramsText.Text = startupCount.ToString();
-            StartupImpactText.Text = "2 High Impact";
+            var startupPrograms = await _winKnightCore.GetStartupPrograms();
+            StartupProgramsText.Text = startupPrograms.Count.ToString();
+            var highImpactCount = startupPrograms.Count(p => p.Impact == "High");
+            StartupImpactText.Text = highImpactCount > 0 ? $"{highImpactCount} High Impact" : "All Low Impact";
+
+            // Network Monitoring
+            await UpdateNetworkStats();
 
             UpdatePerformanceStatus(temp, ramUsage);
             UpdateRestorePointsCount();
+        }
+
+        private async Task UpdateNetworkStats()
+        {
+            try
+            {
+                var hasInternet = await _networkMonitor.HasInternetConnectionAsync();
+                NetworkStatusText.Text = hasInternet ? "Connected" : "Disconnected";
+                NetworkStatusBadge.Background = hasInternet 
+                    ? (Brush)Resources["SuccessBrush"] 
+                    : (Brush)Resources["ErrorBrush"];
+
+                var (download, upload) = await _networkMonitor.GetTotalThroughputAsync();
+                DownloadSpeedText.Text = download.ToString("F1");
+                UploadSpeedText.Text = upload.ToString("F1");
+
+                var primaryInterface = await _networkMonitor.GetPrimaryInterfaceAsync();
+                if (primaryInterface != null)
+                {
+                    NetworkInterfaceText.Text = primaryInterface.Name;
+                    IpAddressText.Text = primaryInterface.IpAddress;
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Network update error: {ex.Message}");
+            }
         }
 
         private void UpdatePerformanceStatus(double cpuTemp, int ramUsage)
@@ -386,18 +377,28 @@ namespace WinKnightUI
             else
             {
                 statusText = "Performance: Good";
-                statusColor = _isDarkMode ?
-                    (Color)ColorConverter.ConvertFromString("#FFFFFF") :
-                    (Color)ColorConverter.ConvertFromString("#1A2332");
+                var currentTheme = ThemeManager.Instance.CurrentTheme;
+                // Use appropriate color based on current theme
+                statusColor = (currentTheme == ThemePreset.Light) 
+                    ? (Color)ColorConverter.ConvertFromString("#1A2332")
+                    : (Color)ColorConverter.ConvertFromString("#FFFFFF");
             }
 
             PerformanceStatusText.Text = statusText;
             PerformanceStatusText.Foreground = new SolidColorBrush(statusColor);
         }
 
-        private void UpdateRestorePointsCount()
+        private async void UpdateRestorePointsCount()
         {
-            RestorePointCountText.Text = "3 available";
+            try
+            {
+                var restorePoints = await Task.Run(() => RestoreGuardManager.ListRestorePoints());
+                RestorePointCountText.Text = $"{restorePoints.Count} available";
+            }
+            catch
+            {
+                RestorePointCountText.Text = "Unable to check";
+            }
         }
         #endregion
 
@@ -602,10 +603,67 @@ namespace WinKnightUI
             }
         }
 
+        #region Quick Actions
+        private async void FlushDns_Click(object sender, RoutedEventArgs e)
+        {
+            QuickActionStatus.Text = "Flushing DNS cache...";
+            FlushDnsBtn.IsEnabled = false;
+            
+            var success = await _networkMonitor.FlushDnsCacheAsync();
+            
+            QuickActionStatus.Text = success ? "✅ DNS cache flushed successfully" : "❌ Failed to flush DNS cache";
+            FlushDnsBtn.IsEnabled = true;
+            ActivityLogger.Log(success ? "DNS cache flushed" : "Failed to flush DNS cache");
+        }
+
+        private async void ResetNetwork_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show(
+                "This will reset Winsock catalog and may require a restart. Continue?",
+                "Reset Network",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Warning);
+
+            if (result != MessageBoxResult.Yes) return;
+
+            QuickActionStatus.Text = "Resetting network...";
+            ResetNetworkBtn.IsEnabled = false;
+            
+            var success = await _networkMonitor.ResetWinsockAsync();
+            
+            QuickActionStatus.Text = success 
+                ? "✅ Network reset complete. Restart may be required." 
+                : "❌ Failed to reset network";
+            ResetNetworkBtn.IsEnabled = true;
+            ActivityLogger.Log(success ? "Winsock reset completed" : "Failed to reset Winsock");
+        }
+
+        private async void ClearTemp_Click(object sender, RoutedEventArgs e)
+        {
+            QuickActionStatus.Text = "Clearing temporary files...";
+            ClearTempBtn.IsEnabled = false;
+            
+            var report = await _winKnightCore.CleanCache();
+            
+            QuickActionStatus.Text = report.IsSuccessful 
+                ? "✅ Temporary files cleared" 
+                : "⚠️ Some files could not be deleted";
+            ClearTempBtn.IsEnabled = true;
+            ActivityLogger.Log("Temporary files cleanup completed");
+        }
+
+        private void OpenDefender_Click(object sender, RoutedEventArgs e)
+        {
+            WindowsDefender_Click(sender, e);
+        }
+        #endregion
+
         protected override void OnClosed(EventArgs e)
         {
             _metricsTimer?.Stop();
             _uptimeTimer?.Stop();
+            _winKnightCore?.Dispose();
+            _networkMonitor?.Dispose();
             base.OnClosed(e);
         }
         #endregion

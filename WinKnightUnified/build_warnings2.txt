@@ -1,0 +1,16 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CacheCleaner -> D:\Notes and Projects\Project\WinKnight\WinKnightUnified\CacheCleaner\bin\Debug\net8.0-windows\CacheCleaner.dll
+  WindowsUpdateManager -> D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WindowsUpdateManager\bin\Debug\net8.0-windows\WindowsUpdateManager.dll
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\WinKnightCore.cs(637,39): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\WinKnightUI_tmxys5jl_wpftmp.csproj]
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\WinKnightCore.cs(637,39): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\WinKnightUI.csproj]
+  WinKnightUI -> D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\bin\Debug\net8.0-windows\WinKnightUI.dll
+
+Build succeeded.
+
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\WinKnightCore.cs(637,39): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\WinKnightUI_tmxys5jl_wpftmp.csproj]
+D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\WinKnightCore.cs(637,39): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [D:\Notes and Projects\Project\WinKnight\WinKnightUnified\WinKnightUI\WinKnightUI.csproj]
+    2 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.68

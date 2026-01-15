@@ -18,7 +18,7 @@ public class WindowsUpdateManager
         while (true)
         {
             Console.Write("Enter your choice: ");
-            string choice = Console.ReadLine();
+            string choice = Console.ReadLine() ?? string.Empty;
 
             switch (choice)
             {

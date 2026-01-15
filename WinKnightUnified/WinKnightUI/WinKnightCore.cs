@@ -37,13 +37,14 @@ namespace WinKnightUI
         public long FreeSpaceGb => FreeSpaceBytes / (1024 * 1024 * 1024);
         public long TotalSpaceGb => TotalSpaceBytes / (1024 * 1024 * 1024);
         public long UsedSpaceGb => TotalSpaceGb - FreeSpaceGb;
-        public double UsagePercentage => (double)UsedSpaceGb / TotalSpaceGb * 100;
+        public double UsagePercentage => TotalSpaceGb > 0 ? (double)UsedSpaceGb / TotalSpaceGb * 100 : 0;
         public long FreeSpaceBytes { get; set; }
         public long TotalSpaceBytes { get; set; }
         public string DiskType { get; set; } = string.Empty;
         public string ReadSpeed { get; set; } = "-- MB/s";
         public string WriteSpeed { get; set; } = "-- MB/s";
         public string ModelName { get; set; } = string.Empty;
+        public double Temperature { get; set; } = -1;
     }
 
     // NEW: Class to hold BSOD report info
@@ -63,8 +64,18 @@ namespace WinKnightUI
         public bool IsEnabled { get; set; }
     }
 
-    public class WinKnightCore
+    public class WinKnightCore : IDisposable
     {
+        private readonly Services.HardwareMonitorService _hardwareMonitor;
+        private double _totalPhysicalMemoryMb = 0;
+        private bool _isDisposed;
+
+        public WinKnightCore()
+        {
+            _hardwareMonitor = new Services.HardwareMonitorService();
+            _totalPhysicalMemoryMb = GetTotalPhysicalMemory();
+        }
+
         public static bool IsAdministrator()
         {
             var identity = WindowsIdentity.GetCurrent();
@@ -73,36 +84,98 @@ namespace WinKnightUI
         }
 
         #region Real-time Metrics
+        /// <summary>
+        /// Gets CPU temperature using LibreHardwareMonitor.
+        /// Returns -1 if temperature cannot be read.
+        /// </summary>
         public async Task<double> GetCpuTemperature()
         {
-            await Task.Delay(100);
-            Random rand = new Random();
-            return Math.Round(rand.NextDouble() * (90 - 30) + 30, 1);
+            try
+            {
+                return await _hardwareMonitor.GetCpuTemperatureAsync();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"GetCpuTemperature error: {ex.Message}");
+                return -1;
+            }
         }
 
+        /// <summary>
+        /// Gets GPU temperature using LibreHardwareMonitor.
+        /// Returns -1 if temperature cannot be read.
+        /// </summary>
         public async Task<double> GetGpuTemperature()
         {
-            await Task.Delay(100);
-            Random rand = new Random();
-            return Math.Round(rand.NextDouble() * (85 - 25) + 25, 1);
+            try
+            {
+                return await _hardwareMonitor.GetGpuTemperatureAsync();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"GetGpuTemperature error: {ex.Message}");
+                return -1;
+            }
         }
 
+        /// <summary>
+        /// Gets system/motherboard temperature.
+        /// Currently returns CPU temp as a proxy; can be enhanced with motherboard sensors.
+        /// </summary>
         public async Task<double> GetSystemTemperature()
         {
-            await Task.Delay(100);
-            Random rand = new Random();
-            return Math.Round(rand.NextDouble() * (60 - 20) + 20, 1);
+            try
+            {
+                // Use CPU temperature as proxy for system temp
+                var cpuTemp = await GetCpuTemperature();
+                // System temp is typically slightly lower than CPU
+                return cpuTemp > 0 ? Math.Max(cpuTemp - 10, 20) : -1;
+            }
+            catch
+            {
+                return -1;
+            }
         }
 
         public async Task<int> GetRamUsage()
         {
-            await Task.Delay(100);
-            var ramCounter = new PerformanceCounter("Memory", "Available MBytes");
-            var totalRam = GetTotalPhysicalMemory();
+            return await Task.Run(() =>
+            {
+                try
+                {
+                    using var ramCounter = new PerformanceCounter("Memory", "Available MBytes");
+                    var totalRam = _totalPhysicalMemoryMb > 0 ? _totalPhysicalMemoryMb : GetTotalPhysicalMemory();
 
-            double availableRam = ramCounter.NextValue();
-            int usage = (int)Math.Round(((totalRam - availableRam) / totalRam) * 100);
-            return usage;
+                    if (totalRam <= 0) return 0;
+
+                    double availableRam = ramCounter.NextValue();
+                    int usage = (int)Math.Round(((totalRam - availableRam) / totalRam) * 100);
+                    return Math.Clamp(usage, 0, 100);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"GetRamUsage error: {ex.Message}");
+                    return 0;
+                }
+            });
+        }
+
+        /// <summary>
+        /// Gets total physical RAM in gigabytes.
+        /// </summary>
+        public double GetTotalRamGb()
+        {
+            return Math.Round(_totalPhysicalMemoryMb / 1024.0, 1);
+        }
+
+        /// <summary>
+        /// Gets used RAM in gigabytes.
+        /// </summary>
+        public async Task<double> GetUsedRamGbAsync()
+        {
+            var usage = await GetRamUsage();
+            var totalGb = GetTotalRamGb();
+            return Math.Round((usage / 100.0) * totalGb, 1);
         }
 
         private double GetTotalPhysicalMemory()
@@ -219,22 +292,25 @@ namespace WinKnightUI
 
         public async Task<List<DiskInfo>> GetDiskHealthDetails()
         {
-            var driveInfos = DriveInfo.GetDrives().Where(d => d.IsReady);
-            var diskInfoList = new List<DiskInfo>();
-
-            foreach (var drive in driveInfos)
+            return await Task.Run(() =>
             {
-                diskInfoList.Add(new DiskInfo
+                var driveInfos = DriveInfo.GetDrives().Where(d => d.IsReady);
+                var diskInfoList = new List<DiskInfo>();
+
+                foreach (var drive in driveInfos)
                 {
-                    Name = drive.Name,
-                    Status = (drive.IsReady && drive.TotalFreeSpace > (drive.TotalSize * 0.1)) ? "Good" : "Warning",
-                    FreeSpaceBytes = drive.TotalFreeSpace,
-                    TotalSpaceBytes = drive.TotalSize,
-                    DiskType = GetDiskDriveType(drive.Name),
-                    ModelName = GetDiskModel(drive.Name)
-                });
-            }
-            return diskInfoList;
+                    diskInfoList.Add(new DiskInfo
+                    {
+                        Name = drive.Name,
+                        Status = (drive.IsReady && drive.TotalFreeSpace > (drive.TotalSize * 0.1)) ? "Good" : "Warning",
+                        FreeSpaceBytes = drive.TotalFreeSpace,
+                        TotalSpaceBytes = drive.TotalSize,
+                        DiskType = GetDiskDriveType(drive.Name),
+                        ModelName = GetDiskModel(drive.Name)
+                    });
+                }
+                return diskInfoList;
+            });
         }
 
         private string GetDiskDriveType(string driveName)
@@ -245,11 +321,14 @@ namespace WinKnightUI
                 {
                     foreach (ManagementObject drive in searcher.Get())
                     {
-                        if (drive["Caption"]?.ToString().Contains(driveName.TrimEnd('\\', ':')) == true)
+                        var caption = drive["Caption"]?.ToString() ?? string.Empty;
+                        if (caption.Contains(driveName.TrimEnd('\\', ':')))
                         {
-                            if (drive["MediaType"]?.ToString().Contains("SSD") == true) return "SSD";
-                            if (drive["MediaType"]?.ToString().Contains("Hard disk media") == true) return "HDD";
-                            if (drive["Model"]?.ToString().Contains("NVMe") == true) return "NVMe SSD";
+                            var mediaType = drive["MediaType"]?.ToString() ?? string.Empty;
+                            var model = drive["Model"]?.ToString() ?? string.Empty;
+                            if (mediaType.Contains("SSD")) return "SSD";
+                            if (mediaType.Contains("Hard disk media")) return "HDD";
+                            if (model.Contains("NVMe")) return "NVMe SSD";
                         }
                     }
                 }
@@ -266,7 +345,8 @@ namespace WinKnightUI
                 {
                     foreach (ManagementObject drive in searcher.Get())
                     {
-                        if (drive["Caption"]?.ToString().Contains(driveName.TrimEnd('\\', ':')) == true)
+                        var caption = drive["Caption"]?.ToString() ?? string.Empty;
+                        if (caption.Contains(driveName.TrimEnd('\\', ':')))
                         {
                             return drive["Model"]?.ToString() ?? "Unknown";
                         }
@@ -556,46 +636,68 @@ namespace WinKnightUI
         #region CacheCleaner Module
         public async Task<ScanReport> CleanCache()
         {
-            var report = new ScanReport { IsSuccessful = true, Message = "Cache cleanup completed." };
-            List<string> tempDirectories = new List<string>
+            return await Task.Run(() =>
             {
-                Path.GetTempPath(),
-                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "Temp"),
-                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "Prefetch")
-            };
+                var report = new ScanReport { IsSuccessful = true, Message = "Cache cleanup completed." };
+                List<string> tempDirectories = new List<string>
+                {
+                    Path.GetTempPath(),
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "Temp"),
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "Prefetch")
+                };
 
-            foreach (var directory in tempDirectories)
+                foreach (var directory in tempDirectories)
+                {
+                    report.LogEntries.Add($"Attempting to clean: {directory}");
+                    try
+                    {
+                        var directoryInfo = new DirectoryInfo(directory);
+                        if (directoryInfo.Exists)
+                        {
+                            foreach (var file in directoryInfo.GetFiles())
+                            {
+                                try { file.Delete(); report.LogEntries.Add($"Deleted file: {file.FullName}"); }
+                                catch (Exception ex) { report.LogEntries.Add($"Could not delete file {file.FullName}: {ex.Message}"); }
+                            }
+                            foreach (var subDir in directoryInfo.GetDirectories())
+                            {
+                                try { subDir.Delete(true); report.LogEntries.Add($"Deleted directory: {subDir.FullName}"); }
+                                catch (Exception ex) { report.LogEntries.Add($"Could not delete directory {subDir.FullName}: {ex.Message}"); }
+                            }
+                        }
+                        else
+                        {
+                            report.LogEntries.Add("Directory does not exist.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        report.IsSuccessful = false;
+                        report.Message = "Cache cleanup failed in one or more locations.";
+                        report.LogEntries.Add($"An error occurred while cleaning {directory}: {ex.Message}");
+                    }
+                }
+                return report;
+            });
+        }
+        #endregion
+
+        #region IDisposable
+        public void Dispose()
+        {
+            if (_isDisposed) return;
+            _isDisposed = true;
+
+            try
             {
-                report.LogEntries.Add($"Attempting to clean: {directory}");
-                try
-                {
-                    var directoryInfo = new DirectoryInfo(directory);
-                    if (directoryInfo.Exists)
-                    {
-                        foreach (var file in directoryInfo.GetFiles())
-                        {
-                            try { file.Delete(); report.LogEntries.Add($"Deleted file: {file.FullName}"); }
-                            catch (Exception ex) { report.LogEntries.Add($"Could not delete file {file.FullName}: {ex.Message}"); }
-                        }
-                        foreach (var subDir in directoryInfo.GetDirectories())
-                        {
-                            try { subDir.Delete(true); report.LogEntries.Add($"Deleted directory: {subDir.FullName}"); }
-                            catch (Exception ex) { report.LogEntries.Add($"Could not delete directory {subDir.FullName}: {ex.Message}"); }
-                        }
-                    }
-                    else
-                    {
-                        report.LogEntries.Add("Directory does not exist.");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    report.IsSuccessful = false;
-                    report.Message = "Cache cleanup failed in one or more locations.";
-                    report.LogEntries.Add($"An error occurred while cleaning {directory}: {ex.Message}");
-                }
+                _hardwareMonitor?.Dispose();
             }
-            return report;
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"WinKnightCore Dispose error: {ex.Message}");
+            }
+
+            GC.SuppressFinalize(this);
         }
         #endregion
     }

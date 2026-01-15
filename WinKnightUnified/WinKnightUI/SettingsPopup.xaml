@@ -155,9 +155,64 @@
                     Click="CloseButton_Click"/>
         </Grid>
 
-        <!-- Settings Content -->
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
             <StackPanel>
+                <!-- Appearance Settings -->
+                <Border Style="{StaticResource SettingsCard}">
+                    <StackPanel>
+                        <TextBlock Text="Appearance" 
+                                   Foreground="{StaticResource FontPrimary}" 
+                                   FontSize="18" 
+                                   FontWeight="SemiBold"
+                                   Margin="0,0,0,10"/>
+                        
+                        <TextBlock Text="Theme"
+                                   Foreground="{StaticResource FontSecondary}"
+                                   FontSize="12"
+                                   Margin="0,0,0,8"/>
+                        
+                        <!-- Theme Preset Buttons -->
+                        <WrapPanel>
+                            <Button x:Name="DarkThemeBtn" Content="🌙 Dark" 
+                                    Click="ThemePreset_Click" Tag="Dark"
+                                    Margin="0,0,8,8" Padding="12,8"
+                                    Background="#0B1A31" Foreground="White"
+                                    BorderThickness="2" BorderBrush="#3498DB"/>
+                            <Button x:Name="LightThemeBtn" Content="☀️ Light" 
+                                    Click="ThemePreset_Click" Tag="Light"
+                                    Margin="0,0,8,8" Padding="12,8"
+                                    Background="#F5F7FA" Foreground="#1A2332"
+                                    BorderThickness="1" BorderBrush="#D6DDE5"/>
+                            <Button x:Name="OceanThemeBtn" Content="🌊 Ocean" 
+                                    Click="ThemePreset_Click" Tag="Ocean"
+                                    Margin="0,0,8,8" Padding="12,8"
+                                    Background="#0D1B2A" Foreground="#E0FBFC"
+                                    BorderThickness="1" BorderBrush="#00B4D8"/>
+                            <Button x:Name="ForestThemeBtn" Content="🌲 Forest" 
+                                    Click="ThemePreset_Click" Tag="Forest"
+                                    Margin="0,0,8,8" Padding="12,8"
+                                    Background="#1A1D21" Foreground="#E9ECEF"
+                                    BorderThickness="1" BorderBrush="#28A745"/>
+                            <Button x:Name="SunsetThemeBtn" Content="🌅 Sunset" 
+                                    Click="ThemePreset_Click" Tag="Sunset"
+                                    Margin="0,0,8,8" Padding="12,8"
+                                    Background="#1A0F0F" Foreground="#FFF5F5"
+                                    BorderThickness="1" BorderBrush="#FF6B35"/>
+                            <Button x:Name="NordThemeBtn" Content="❄️ Nord" 
+                                    Click="ThemePreset_Click" Tag="Nord"
+                                    Margin="0,0,8,8" Padding="12,8"
+                                    Background="#2E3440" Foreground="#ECEFF4"
+                                    BorderThickness="1" BorderBrush="#88C0D0"/>
+                        </WrapPanel>
+                        
+                        <TextBlock Text="Click a theme to apply it instantly. Your preference will be saved."
+                                   Foreground="{StaticResource FontSecondary}"
+                                   FontSize="12"
+                                   Margin="0,10,0,0"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+
                 <!-- Windows Update Settings -->
                 <Border Style="{StaticResource SettingsCard}">
                     <StackPanel>

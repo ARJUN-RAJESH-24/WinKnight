@@ -6,7 +6,7 @@ namespace WinKnightUI.Services
 {
     public static class UpdateMonitorService
     {
-        private static EventLog updateLog;
+        private static EventLog? updateLog;
 
         public static void StartMonitoring()
         {

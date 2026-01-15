@@ -8,9 +8,9 @@ namespace WinKnightUI
 {
     public partial class StartupSplashScreen : Window
     {
-        private DispatcherTimer _loadingTimer;
+        private DispatcherTimer? _loadingTimer;
         private int _loadingStep = 0;
-        private string[] _loadingSteps = {
+        private readonly string[] _loadingSteps = {
             "Initializing System Protection...",
             "Loading Security Modules...",
             "Starting Monitoring Services...",
@@ -33,7 +33,7 @@ namespace WinKnightUI
             _loadingTimer.Start();
         }
 
-        private void LoadingTimer_Tick(object sender, EventArgs e)
+        private void LoadingTimer_Tick(object? sender, EventArgs e)
         {
             // Cycle through loading dots
             string baseText = "Loading modules";
@@ -51,7 +51,7 @@ namespace WinKnightUI
             // Stop after going through all steps a couple times
             if (_loadingStep >= _loadingSteps.Length * 8)
             {
-                _loadingTimer.Stop();
+                _loadingTimer?.Stop();
                 LoadingText.Text = "Ready!";
                 StatusText.Text = "Launching WinKnight...";
             }
